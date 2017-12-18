@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+   <#assign ctx = request.contextPath />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
+   <link rel="stylesheet" type="text/css" href="${ctx}/resources/css/test.css">
+   <script type="text/javascript" src="${ctx}/resources/js/test.js"></script>
+   <script type="text/javascript" src="${ctx}/resources/js/jquery.min.js"></script>
+</head>
+<body>
+<h2>当前页码：${pageInfo.pageNum} 总记录数：${pageInfo.total}</h2>
+<h2>当前系统时间：<div id="time"></div></h2>
+<!--<input type="button" value="立即登录" onclick="dosave();"/>-->
+<#list pageInfo.list as user>
+   用户名：${user.user_name}
+   昵 称：${user.weixin_nikeName}
+   年 龄: ${user.user_age}
+</#list>
+<script type="text/javascript">
+   $(document).ready(function(){
+//      alert("5555");
+   var userName=dosave();
+      alert(userName);
+//      $("#time").innerHTML=userName;
+   });
+
+</script>
+</body>
+</html>
