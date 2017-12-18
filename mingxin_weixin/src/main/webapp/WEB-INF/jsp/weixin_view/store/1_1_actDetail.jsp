@@ -24,6 +24,7 @@
 
    <link rel="stylesheet" href="<%=basePath%>resources/test/taobao/css/myCss.css">
 
+
    <link rel="stylesheet" href="<%=basePath%>resources/test/taobao/css/jquery-labelauty.css">
 
    <style>
@@ -122,7 +123,7 @@
       <img style="height: 60px;" src="<%=basePath%>resources/test/store/themes/img/bg/ssy.jpg" alt="">
    </div>
    <div class="aui-product-coupon">
-      <a href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear"
+      <a id="selectType" href="javascript:;" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear"
       <%-- data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}"--%>>
          <div class="aui-address-cell-bd">选择</div>
          <div class="aui-address-cell-ft">颜色分类</div>
@@ -139,6 +140,11 @@
             <span id="del"></span>
          </div>
          <div  style="padding: 5px;max-height:20rem;overflow: auto;">
+            <div >选择日期</div>
+            <ul class="dowebok">
+               <li><input type="radio" name="radio1" data-labelauty="2017年12月6日（周六）08:00-18:00"></li>
+               <li><input type="radio" name="radio1" data-labelauty="2017年12月7日（周日）08:00-18:00"></li>
+            </ul>
             <div >开团人数</div>
             <ul class="dowebok">
                <li><input  type="radio" name="radio" data-labelauty="1人"></li>
@@ -154,12 +160,8 @@
                <li><input type="radio" name="radio" data-labelauty="20人"></li>
                <li><input type="radio" name="radio" data-labelauty="30人(拼主0.5元)"></li>
             </ul>
-            <div >选择日期</div>
-            <ul class="dowebok">
-               <li><input type="radio" name="radio1" data-labelauty="2017年12月6日（周六）"></li>
-               <li><input type="radio" name="radio1" data-labelauty="2017年12月7日（周日）"></li>
-            </ul>
-            <div >是否购买纪念品</div>
+
+            <div >纪念品(每人限购1份)</div>
             <ul class="dowebok">
                <li><input type="checkbox" name="checkbox" data-labelauty="不购买"></li>
                <li><input type="checkbox" name="checkbox" data-labelauty="相册"></li>
@@ -430,16 +432,18 @@
 <script type="text/javascript">
    $(function () {
 
-      $(':input').labelauty();
+
 
       //绑定滚动条事件
       $(window).bind("scroll", function () {
          var sTop = $(window).scrollTop();
          var sTop = parseInt(sTop);
+         //alert(sTop);
          if (sTop >= 100) {
             if (!$("#scrollSearchPro").is(":visible")) {
                try {
                   $("#scrollSearchPro").slideDown();
+//                  alert("显示出菜单");
                } catch (e) {
                   $("#scrollSearchPro").show();
                }
@@ -449,12 +453,17 @@
             if ($("#scrollSearchPro").is(":visible")) {
                try {
                   $("#scrollSearchPro").slideUp();
+//                  alert("关闭了菜单");
                } catch (e) {
+                  alert(e);
                   $("#scrollSearchPro").hide();
                }
             }
          }
       });
+
+      /*扩展的radio button*/
+      $(':input').labelauty();
 
       /*弹出选择颜色尺码页面*/
       function toshare() {
@@ -466,7 +475,6 @@
             $(".sharebg").addClass("sharebg-active");
          }
          document.documentElement.style.overflow = 'hidden';
-         document.body.style.overflow = 'hidden';
          $(".sharebg-active,.share_btn,#del").click(function () {
             $(".am-share").removeClass("am-modal-active");
             setTimeout(function () {
@@ -474,17 +482,14 @@
                $(".sharebg").remove();
             }, 300);
             document.documentElement.style.overflow = 'auto';
-            document.body.style.overflow = 'auto';
          });
       }
 
-      $("#buy").click(function () {
+      $("#buy,#selectType").click(function () {
          toshare();
       });
 
-      $("input[type='text']").click(function(){
-         $(this).addClass("inputActive").parent().siblings().children().removeClass("inputActive");
-      });
+
 
    });
 </script>
