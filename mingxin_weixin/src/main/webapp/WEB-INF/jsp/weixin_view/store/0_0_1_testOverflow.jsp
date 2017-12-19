@@ -11,7 +11,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Brook">
-    <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/popNotice.css"><%--弹出选项样式--%>
+    <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/popGroupChoices.css"><%--弹出选项样式--%>
     <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/phoneBase.css"><%--手机网页基础字体定义--%>
     <title>解决滚动穿透问题 Demo</title>
 </head>
@@ -30,15 +30,23 @@
         <div style="height:80rem"></div>
     </div>
     <div id="modal" class="modal">
-    </div>
 
+    </div>
     <div class="modal-frame" id="modal-frame">
 
         <div class="modal-frame-header">
-            <div class="titleText">拼团规则</div>
+            <div class="preIcon">
+                <img src="http://pic.cclycs.com/pic/0131/08/4413233.jpg" alt="" />
+            </div>
+            <div class="oderDetails">
+                <div><font size="4.5rem" color="red">￥90.0</font><del>￥99</del>(省￥9)</div>
+                <div><font  size="1.3">已团26人</font></div>
+                <div>选择：5人团+纪念水晶+活动险</div>
+            </div>
             <span  class="closeBtn" id="closeBtn">×</span>
         </div>
         <div class="modal-frame-content">
+
 
             这里是可滚动内容<br>
             Modal Content<br>
@@ -63,10 +71,10 @@
             Modal Content<br>
             Modal Content<br>
         </div>
-        <div class="modal-frame-footer"><button>按钮</button></div>
+        <div class="modal-frame-footer">底部按钮</div>
     </div>
+    <script src="<%=basePath%>resources/test/my/js/popGroupChoices.js"></script><%--弹出选项js--%>
 
-    <script src="<%=basePath%>resources/test/my/js/popNotice.js"></script><%--弹出选项js--%>
     <script src="<%=basePath%>resources/test/my/js/scrolling-element.js"></script>
     <script>
         (function () {
@@ -87,13 +95,16 @@
 
 //            $(".js-open-modal").click(function(){ openModal; });
 
-//            document.querySelector('#modal').onclick = closeModal;
+            document.querySelector('#modal').onclick = closeModal;
             document.querySelector('#closeBtn').onclick = closeModal;
             /*$("#modal").click(function(){ closeModal; });
             $("#closeBtn").click(function(){ closeModal; });*/
 
         })();
     </script>
+
+
 </div>
+
 </body>
 </html>

@@ -1,0 +1,90 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/*html {
+    font-size: 62.5%;
+    !*font-size是rem的基础定义用于控制整个页面的相对宽、高值*!
+    !*浏览器的默认字体高都是16px,则font-size:125%为20px，62.5%为10px*!
+}
+
+
+body{
+    font-size: 1.3rem;!*定义页面的字体大小*!
+    font-family:Helvetica;
+}*/
+
+body.modal-open {
+    position: fixed;
+    width: 100%;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.modal-frame {
+
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 82%;
+    background: #fff;
+    z-index: 9000;
+}
+
+.modal-frame-header {
+    width:100%;
+    position: relative;
+    height: 19%;
+    border-bottom:1px solid #fff3dc;
+}
+
+.modal-frame-header .closeBtn {
+    position: absolute;
+    top:0.2rem;
+    right: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.modal-frame-header .preIcon {
+    position: absolute;
+    top:-3rem;
+    left:1rem;
+    width:9.5rem;
+    height: 9.5rem;
+    background-color: red;
+}
+
+.modal-frame-header .preIcon img{
+    width:100%;
+    height:auto;
+}
+
+.modal-frame-header .oderDetails {
+    position: absolute;
+    top:1rem;
+    left:11.5rem;
+    width:19rem;
+    background-color: #999A9B;
+}
+
+
+.modal-frame-content {
+    height:67%;
+    overflow-y:auto;
+    padding:0.5rem;
+}
+
+.modal-frame-footer {
+    background-color: red;
+    text-align: center;
+    height:14%;
+    font-size: 2rem;
+}

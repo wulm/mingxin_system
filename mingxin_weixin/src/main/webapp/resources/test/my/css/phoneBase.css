@@ -1,0 +1,14 @@
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    font-size: 62.5%;
+    /*font-size是rem的基础定义用于控制整个页面的相对宽、高值*/
+    /*浏览器的默认字体高都是16px,则font-size:125%为20px，62.5%为10px*/
+}
+
+
+
+body{
+    font-size: 1.3rem;/*定义页面的字体大小*/
+    font-family:Helvetica;/*字体类型定义*/
+}
+
