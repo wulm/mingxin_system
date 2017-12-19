@@ -27,7 +27,8 @@ public class ZZYAction {
    @RequestMapping("/actDetail")
    public String zzyActDetail() {
       System.out.println("test-actDetail");
-      return "weixin_view/store/1_1_actDetail";
+//      return "weixin_view/store/1_1_actDetail";
+      return "weixin_view/store/0_0_testOverflow";
    }
 
 

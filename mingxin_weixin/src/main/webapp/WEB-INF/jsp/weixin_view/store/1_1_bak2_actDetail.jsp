@@ -27,38 +27,6 @@
    <link rel="stylesheet" href="<%=basePath%>resources/test/taobao/css/jquery-labelauty.css">
 
    <style>
-
-      body.modal-open {
-         position: fixed;
-         width: 100%;
-      }
-
-      .modal {
-         background: rgba(0, 0, 0, 0.5);
-         position: fixed;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         left: 0;
-
-         display: none;
-      }
-
-      .modal-frame {
-         position: absolute;
-         left: 0rem;
-         right: 0rem;
-         /*居中位置start*/
-         /*top: 50%;
-         transform: translateY(-50%);*/
-         /*居中位置end*/
-         top: 20rem;
-         transform: translateY(-20rem);
-         border: solid 1px #ddd;
-         background: #fff;
-         padding: 1px;
-      }
-
       .dowebok ul { list-style-type: none;}
       .dowebok li { display: inline-block;}
       .dowebok li { margin: 3px 2px;}
@@ -495,11 +463,11 @@
          $(".am-share").addClass("am-modal-active");
          if ($(".sharebg").length > 0) {
             $(".sharebg").addClass("sharebg-active");
-//            $('html,body').addClass('ovfHiden'); //使网页不可滚动
+            ModalHelper.afterOpen();
          } else {
             $("body").append('<div class="sharebg"></div>');
             $(".sharebg").addClass("sharebg-active");
-//            $('html,body').addClass('ovfHiden'); //使网页不可滚动
+            ModalHelper.afterOpen();
          }
 //         document.documentElement.style.overflow='hidden';
 //         document.body.style.overflow = 'hidden';
@@ -508,7 +476,7 @@
             setTimeout(function () {
                $(".sharebg-active").removeClass("sharebg-active");
                $(".sharebg").remove();
-//               $('html,body').removeClass('ovfHiden'); //使网页恢复可滚
+               ModalHelper.beforeClose();
             }, 100);
 //            document.documentElement.style.overflow='auto';
 //            document.body.style.overflow = 'auto';
@@ -519,7 +487,26 @@
          toshare();
       });
 
-
+      /**
+       * ModalHelper helpers resolve the modal scrolling issue on mobile devices
+       * https://github.com/twbs/bootstrap/issues/15852
+       * requires document.scrollingElement polyfill https://github.com/yangg/scrolling-element
+       */
+      var ModalHelper = (function (bodyCls) {
+         var scrollTop;
+         return {
+            afterOpen: function () {
+               scrollTop = document.scrollingElement.scrollTop;
+               document.body.classList.add(bodyCls);
+               document.body.style.top = -scrollTop + 'px';
+            },
+            beforeClose: function () {
+               document.body.classList.remove(bodyCls);
+               // scrollTop lost after set position:fixed, restore it back.
+               document.scrollingElement.scrollTop = scrollTop;
+            }
+         };
+      })('modal-open');
 
    });
 </script>
