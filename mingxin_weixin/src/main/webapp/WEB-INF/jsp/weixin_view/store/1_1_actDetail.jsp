@@ -465,7 +465,7 @@
             $("body").append('<div class="sharebg"></div>');
             $(".sharebg").addClass("sharebg-active");
          }
-         document.documentElement.style.overflow = 'hidden';
+
          document.body.style.overflow = 'hidden';
          $(".sharebg-active,.share_btn,#del").click(function () {
             $(".am-share").removeClass("am-modal-active");
@@ -473,17 +473,12 @@
                $(".sharebg-active").removeClass("sharebg-active");
                $(".sharebg").remove();
             }, 300);
-            document.documentElement.style.overflow = 'auto';
             document.body.style.overflow = 'auto';
          });
       }
 
       $("#buy").click(function () {
          toshare();
-      });
-
-      $("input[type='text']").click(function(){
-         $(this).addClass("inputActive").parent().siblings().children().removeClass("inputActive");
       });
 
    });
