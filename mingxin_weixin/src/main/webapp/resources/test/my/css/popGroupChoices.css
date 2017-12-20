@@ -80,25 +80,28 @@ body.modal-open {
 
 
 .modal-frame-content {
-    height:67%;
+    height:70%;
     overflow-y:auto;
-    padding:0.5rem;
+    padding:1rem;
 }
 
 .modal-frame-content hr{
     height:1px;
     border:none;
     background-color: #eeeeee;
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
 }
 .modal-frame-content  .choice-items .choice-title{font-size: 1.2rem;}
 .modal-frame-content  .choice-items ul { list-style-type: none;
-    padding-left:0rem;padding-right: 0rem;margin-top: 0.2rem;margin-bottom: 0px;}
+    padding-left:0rem;padding-right: 0rem;margin-top: 2px;margin-bottom: 0;}
 .modal-frame-content  .choice-items li { display: inline-block;}
-/*.modal-frame-content  .choice-items li { font-size: 1.5rem;}*/
+/*.modal-frame-content  .choice-items li { font-size: 1.5rem;margin-bottom: 2px;}*/
 
 .modal-frame-footer {
     background-color: red;
     text-align: center;
-    height:14%;
-    font-size: 2rem;
+    height:11%;
+    /*height: 3rem;*/
+    font-size: 1.7rem;
 }
