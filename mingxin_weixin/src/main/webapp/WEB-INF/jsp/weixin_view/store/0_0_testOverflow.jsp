@@ -40,6 +40,50 @@
         </div>
         <div class="modal-frame-content">
 
+            <div >
+                <div >选择日期</div>
+                <ul class="dowebok">
+                    <li><input type="radio" name="radio1" data-labelauty="2017年12月6日（周六）08:15-16:40"></li>
+                    <li><input type="radio" name="radio1" data-labelauty="2017年12月7日（周日）08:15-16:40"></li>
+                </ul>
+                <div >开团人数</div>
+                <ul class="dowebok">
+                    <li><input  type="radio" name="radio" data-labelauty="1人"></li>
+                    <li><input type="radio" name="radio" data-labelauty="2人"></li>
+                    <li><input type="radio" name="radio" data-labelauty="3人"></li>
+
+                    <li><input type="radio" name="radio" data-labelauty="5人"></li>
+
+                    <li><input type="radio" name="radio" data-labelauty="8人"></li>
+
+                    <li><input type="radio" name="radio" data-labelauty="10人"></li>
+                    <li><input type="radio" name="radio" data-labelauty="15人"></li>
+                    <li><input type="radio" name="radio" data-labelauty="20人"></li>
+                    <li><input type="radio" name="radio" data-labelauty="30人(拼主0.5元)"></li>
+                </ul>
+
+                <div >是否购买纪念品</div>
+                <ul class="dowebok">
+                    <li><input type="checkbox" name="checkbox" data-labelauty="不购买"></li>
+                    <li><input type="checkbox" name="checkbox" data-labelauty="相册"></li>
+                    <li><input type="checkbox" name="checkbox" data-labelauty="围巾"></li>
+                    <li><input type="checkbox" name="checkbox" data-labelauty="水晶"></li>
+                    <li><input type="checkbox" name="checkbox" data-labelauty="纪念衫"></li>
+
+                </ul>
+                <div >购买保险</div>
+                <ul class="dowebok">
+                    <li><input type="radio" name="radio3" data-labelauty="是"></li>
+                    <li><input type="radio" name="radio3" data-labelauty="否"></li>
+                </ul>
+                <div >携带12岁以下儿童</div>
+                <ul class="dowebok">
+                    <li><input type="radio" name="radio4" data-labelauty="是"></li>
+                    <li><input type="radio" name="radio4" data-labelauty="否"></li>
+                </ul>
+            </div>
+
+
             这里是可滚动内容<br>
             Modal Content<br>
             Modal Content<br>

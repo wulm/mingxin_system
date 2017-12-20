@@ -90,7 +90,11 @@ body.modal-open {
     border:none;
     background-color: #eeeeee;
 }
-
+.modal-frame-content  .choice-items .choice-title{font-size: 1.2rem;}
+.modal-frame-content  .choice-items ul { list-style-type: none;
+    padding-left:0rem;padding-right: 0rem;margin-top: 0.2rem;margin-bottom: 0px;}
+.modal-frame-content  .choice-items li { display: inline-block;}
+/*.modal-frame-content  .choice-items li { font-size: 1.5rem;}*/
 
 .modal-frame-footer {
     background-color: red;
