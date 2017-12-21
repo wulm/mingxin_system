@@ -1,0 +1,99 @@
+
+/*前三行价格*/
+.aui-real-price {
+	padding: 0.2rem 0.2rem 0 0.2rem;
+}
+.aui-real-price span {
+	font-size: 1.2rem;
+	color: #fc6248;
+	/*float: left;*/
+	font-weight: 700;
+}
+.aui-real-price span i {
+	font-size: 1rem;
+}
+.aui-real-price .aui-settle-choice span {
+	font-size: 0.7rem;
+	float: left;
+	display: block;
+	margin-top: 0.2rem;
+	margin-left: 0.2rem;
+	/*padding: 0 0.2rem;*/
+	font-weight: 200;
+}
+.aui-real-price .aui-font-num {
+	line-height: 0.8rem;
+	color: #999;
+	font-size: 0.8rem;
+	text-decoration: line-through;
+	font-weight: inherit;
+	margin-left: 0.2rem;
+}
+.aui-settle-choice span {
+	color: #f23030;
+	border: 1px solid #f23030;
+	border-radius: 0.2rem;
+	font-size: 0.7rem;
+	margin-right: 0.2rem;
+}
+.aui-product-title {
+	padding-left: 0.2rem;
+	padding-right: 0.2rem;
+}
+.aui-product-title h2 {
+	font-size: 0.9rem;
+	font-weight: 800;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.aui-product-title p {
+	font-size: 0.7rem;
+	color: #999A9B;
+	padding-top: 0.2rem;
+}
+/*前三行价格*/
+
+
+/*商家标签*/
+.aui-product-boutique {
+	width: 100%;
+	padding: 0.1rem 0.1rem;
+	margin: 0.1rem 0.1rem;
+	background: #FFFFfc;
+	font-size: 0.5rem;
+	/*border: 1px solid #999A9B;*/
+
+}
+.aui-product-boutique img {
+	float: left;
+	width: 0.8rem;
+	height: 0.8rem;
+	margin-right: 0.3px;
+}
+.aui-product-tag-text {
+	margin-right: 0.7rem;
+	font-size: 0.7rem;
+	color: #666;
+}
+/*商家标签*/
+
+/*分割栏*/
+.Seg-line{
+	height: 0.2rem;
+	background-color: #eeeeee;
+	width: 100%;
+}
+/*分割栏*/
+
+
+
+
+
+
+
+
+
+
+

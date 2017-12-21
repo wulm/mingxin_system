@@ -332,6 +332,9 @@ img {
 .aui-text-white {
 	color: #ffffff !important;
 }
+.aui-text-gray {
+	color: #999A9B !important;
+}
 .aui-text-primary {
 	color: #00bcd4 !important;
 }
