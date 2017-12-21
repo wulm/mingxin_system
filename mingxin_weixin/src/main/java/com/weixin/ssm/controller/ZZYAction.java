@@ -29,7 +29,7 @@ public class ZZYAction {
       System.out.println("test-actDetail");
 //      return "weixin_view/store/1_1_actDetail";
 //      return "weixin_view/store/0_0_testOverflow";/*弹出提示窗*/
-      return "weixin_view/store/0_0_1_testOverflow";/*弹出选择活动选项*/
+      return "weixin_view/my/0_0_1_testOverflow";/*弹出选择活动选项*/
    }
 
 
