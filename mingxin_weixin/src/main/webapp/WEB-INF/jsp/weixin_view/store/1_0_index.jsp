@@ -22,8 +22,8 @@
    <link rel="apple-touch-icon-precomposed" sizes="114x114"
          href="<%=basePath%>jsp/weixin_view/store/iTunesArtwork@2x.png">
 
-   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/aui/css/aui-slide.css"/>
-   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/aui/css/aui.css"/>
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-slide.css"/>
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css"/>
    <style type="text/css">
       .aui-content-padded {
          padding: 0.75rem;
@@ -65,7 +65,7 @@
                </a>
             </div>
             <div class="aui-slide-node bg-dark">
-               <a href="<%=basePath%>zzy/actDetail.htm">
+               <a href="<%=basePath%>zzy/actDetail2.htm">
                   <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/>
                </a>
             </div>
@@ -284,7 +284,7 @@
       // "width":300,
       "height": 150,
       "speed": 800,
-      "autoPlay": 5000, //自动播放
+      "autoPlay": 10000, //自动播放
       "loop": true,
       "pageShow": true,
       "pageStyle": 'dot',

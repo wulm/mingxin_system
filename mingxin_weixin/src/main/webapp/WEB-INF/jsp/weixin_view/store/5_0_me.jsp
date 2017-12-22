@@ -19,7 +19,7 @@
    <link rel="icon" type="image/x-icon" href="favicon.ico">
    <link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
 
-   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/aui/css/aui.css"/>
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css"/>
 
 </head>
 

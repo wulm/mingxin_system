@@ -22,7 +22,7 @@
    <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/act-detail-core.css">
    <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/act-detail-icon.css">
    <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/act-detail-home.css">
-   <link rel="stylesheet" href="<%=basePath%>resources/test/taobao/css/act-detail-myCss.css">
+   <%--<link rel="stylesheet" href="<%=basePath%>resources/test/taobao/css/act-detail-myCss.css">--%>
    <%--活动详情内容css--%>
    <title>活动详情页</title>
    <%--<style type="text/css">

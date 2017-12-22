@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" href="<%=basePath%>resources/test/store/themes/css/icon.css">
 	<link rel="stylesheet" href="<%=basePath%>resources/test/store/themes/css/home.css">
     
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/aui/css/aui.css" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css" />
      <style type="text/css">
         .aui-list-item.wechat-top {
             background-color: #f3f3f7;

@@ -126,7 +126,7 @@
       <ul class="aui-list ">
          <li class="aui-list-header" style="height: 1.6rem;background-color: #FFFFfc;border-bottom:1px solid #eeeedd;">
             <div style="float: left;">75人正在拼团，可直接参与</div>
-            <div style="float: right;"><a href="javascript:;">查看更多<i class="aui-iconfont aui-icon-right"></a></i></div>
+            <div style="float: right;"><a href="javascript:;">查看更多<i class="aui-iconfont aui-icon-right"></i></a></div>
          </li>
          <li class="aui-list-item aui-list-item-middle">
             <div class="aui-media-list-item-inner" style="width: 100%;">
@@ -169,7 +169,7 @@
       <ul class="aui-list aui-media-list">
          <li class="aui-list-header" style="height: 1.6rem;background-color: #FFFFfc;border-bottom:1px solid #eeeedd;">
             <div style="float: left;">活动评价（51）</div>
-            <div style="float: right;"><a href="javascript:;">查看全部<i class="aui-iconfont aui-icon-right"></a></i></div>
+            <div style="float: right;"><a href="javascript:;">查看全部<i class="aui-iconfont aui-icon-right"></i></a></div>
          </li>
          <li class="aui-list-item" style="padding-right:0.3rem; ">
             <div class="aui-info" style="padding:0.2rem ;">

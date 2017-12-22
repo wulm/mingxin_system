@@ -17,7 +17,7 @@
    <link rel="stylesheet" href="<%=basePath%>resources/test/store/themes/css/core.css">
    <link rel="stylesheet" href="<%=basePath%>resources/test/store/themes/css/icon.css">
    <link rel="stylesheet" href="<%=basePath%>resources/test/store/themes/css/home.css">
-   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/aui/css/aui.css"/>
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css"/>
    <link rel="icon" type="image/x-icon" href="favicon.ico">
    <link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
    <style>
