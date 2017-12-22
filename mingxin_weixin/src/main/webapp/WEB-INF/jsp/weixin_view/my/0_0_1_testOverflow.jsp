@@ -128,53 +128,102 @@
             <div style="float: left;">75人正在拼团，可直接参与</div>
             <div style="float: right;"><a href="javascript:;">查看更多<i class="aui-iconfont aui-icon-right"></a></i></div>
          </li>
-         <li class="aui-list-item">
-            <div class="aui-list-item-inner ">
-               <div class="aui-list-item-left">
-                  <div style="float: left;">
-                     <img style="width: 1.6rem;height: 1.6rem;left: 0;right:0;"
-                          src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
-                  </div>
-                  <div style="float:left;padding-top:0.3rem;padding-left:0.3rem;">
-                     小明
-                  </div>
+         <li class="aui-list-item aui-list-item-middle">
+            <div class="aui-media-list-item-inner" style="width: 100%;">
+               <div class="aui-list-item-media" style="width:13%;">
+                  <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" class="aui-img-round aui-list-img-sm">
                </div>
-
-               <div class="aui-list-item-right" style="width:18rem;">
-                  <div style="float: left;">
-                     <div style="align-items: center;"><font size="2px">还差<font color="red">2人</font>拼成</font></div>
-                     <div style="align-items: center;"><font size="1px">剩余19:21:24.5</font></div>
-                  </div>
-                  <div class="aui-btn aui-btn-danger" style="float: right;font-size: 0.5rem;">参与拼团</div>
-                  <%--<div class="aui-badge" style="float: left;">88</div>--%>
+               <div class="aui-list-item-inner " style="width:29%;">
+                  流浪男
+               </div>
+               <div class="aui-list-item-right" style="font-size: 0.5rem;width:28%;">
+                  <div ><font size="2px">还差<font color="red">2人</font>拼成</font></div>
+                  <div >剩余20:50:41.08</div>
+               </div>
+               <div class="aui-list-item-right " >
+                  <div class="aui-btn aui-btn-danger" style="font-size: 0.5rem;">参与拼团</div>
                </div>
             </div>
          </li>
-         <li class="aui-list-item">
-            <div class="aui-list-item-inner ">
-               <div class="aui-list-item-left">
-                  <div style="float: left;">
-                     <img style="width: 1.6rem;height: 1.6rem;left: 0;right:0;"
-                          src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
-                  </div>
-                  <div style="float:left;padding-top:0.3rem;padding-left:0.3rem;">
-                     小明
-                  </div>
+         <li class="aui-list-item aui-list-item-middle">
+            <div class="aui-media-list-item-inner" style="width: 100%;">
+               <div class="aui-list-item-media" style="width:13%;">
+                  <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" class="aui-img-round aui-list-img-sm">
                </div>
-
-               <div class="aui-list-item-right" style="width:18rem;">
-                  <div style="float: left;">
-                     <div><font size="1">还差<font color="red">2人</font>拼成</font></div>
-                     <div><font size="1">剩余19:21:24.5</font></div>
-                  </div>
-                  <div class="aui-btn aui-btn-danger" style="float: right;font-size: 0.5rem;">参与拼团</div>
-                  <%--<div class="aui-badge" style="float: left;">88</div>--%>
+               <div class="aui-list-item-inner " style="width:29%;">
+                  流浪男
+               </div>
+               <div class="aui-list-item-right" style="font-size: 0.5rem;width:28%;">
+                  <div ><font size="2px">还差<font color="red">2人</font>拼成</font></div>
+                  <div >剩余20:50:41.08</div>
+               </div>
+               <div class="aui-list-item-right " >
+                  <div class="aui-btn aui-btn-danger" style="font-size: 0.5rem;">参与拼团</div>
                </div>
             </div>
          </li>
       </ul>
    </div>
    <div class="Seg-line"></div>
+   <div id="actAppraise">
+      <ul class="aui-list aui-media-list">
+         <li class="aui-list-header" style="height: 1.6rem;background-color: #FFFFfc;border-bottom:1px solid #eeeedd;">
+            <div style="float: left;">活动评价（51）</div>
+            <div style="float: right;"><a href="javascript:;">查看全部<i class="aui-iconfont aui-icon-right"></a></i></div>
+         </li>
+         <li class="aui-list-item" style="padding-right:0.3rem; ">
+            <div class="aui-info" style="padding:0.2rem ;">
+               <div class="aui-info-item">
+                  <img src="<%=basePath%>resources/test/my/image/liulangnan.png" style="width:1rem" class="aui-img-round" />
+                  <span class="aui-margin-l-5">流浪男</span>
+               </div>
+               <div class="aui-info-item">2017.07.14 </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+               <%--<div class="aui-list-item-media">
+                  <img src="<%=basePath%>resources/test/my/image/demo1.png">
+               </div>--%>
+               <div class="aui-list-item-inner">
+                  <div class="aui-list-item-text">
+                     <div class="aui-list-item-title aui-ellipsis-2" style="font-size: 0.7rem;">
+                        活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好
+                     </div>
+                  </div>
+                  <div class="aui-list-item-text aui-ellipsis-1" style="font-size: 0.6rem;">
+                     颜色:羊羔绒【红色】 尺寸:1.2米床【约5.2斤重】
+                  </div>
+               </div>
+            </div>
+         </li>
+         <li class="aui-list-item" style="padding-right:0.3rem; ">
+            <div class="aui-info" style="padding:0.2rem ;">
+               <div class="aui-info-item">
+                  <img src="<%=basePath%>resources/test/my/image/liulangnan.png" style="width:1rem" class="aui-img-round" />
+                  <span class="aui-margin-l-5">流浪男</span>
+               </div>
+               <div class="aui-info-item">2017.07.14 </div>
+            </div>
+            <div class="aui-media-list-item-inner">
+               <%--<div class="aui-list-item-media">
+                  <img src="<%=basePath%>resources/test/my/image/demo1.png">
+               </div>--%>
+               <div class="aui-list-item-inner">
+                  <div class="aui-list-item-text">
+                     <div class="aui-list-item-title aui-ellipsis-2" style="font-size: 0.7rem;">
+                        活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好
+                     </div>
+                  </div>
+                  <div class="aui-list-item-text aui-ellipsis-1" style="font-size: 0.6rem;">
+                     颜色:羊羔绒【红色】 尺寸:1.2米床【约5.2斤重】
+                  </div>
+               </div>
+            </div>
+         </li>
+
+      </ul>
+
+   </div>
+
 
    <div>
 
@@ -250,15 +299,14 @@
       listen: true,
       distance: 200 //判断到达底部的距离，isToBottom为true
    },function(ret){
-
-      if($('#backTop').is(':visible')){return;}
-//      var scrollTop=ret.scrollTop;
-      if(ret.scrollTop>300&&!$('#backTop').is(':visible')){
-//         alert("101010");
-         $('#backTop').show();
+      if(ret.scrollTop>=400){
+         if(!$('#backTop').is(':visible')){
+            $('#backTop').show();
+         }
       }else{
-//         alert("101010");
-         $('#backTop').hide();
+         if($('#backTop').is(':visible')){
+            $('#backTop').hide();
+         }
       }
     /*if(ret.isToBottom){
     document.getElementById("demo").textContent = "已到达底部";
