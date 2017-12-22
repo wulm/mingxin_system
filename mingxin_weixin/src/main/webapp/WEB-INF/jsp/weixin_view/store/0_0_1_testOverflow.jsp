@@ -435,7 +435,7 @@
                <ul>
                   <li><input type="radio" name="radio4" data-labelauty="是"></li>
                   <li><input type="radio" name="radio4" data-labelauty="否"></li>
-                  <div class="aui-bar aui-bar-btn" style="width:40%;float: right;" type="count" id="demo">
+                  <div class="aui-bar aui-bar-btn" style="width:40%;float: right;" type="count" id="backTop">
                      <div class="aui-bar-btn-item aui-font-size-20">
                         <i class="aui-iconfont aui-icon-minus"></i>
                      </div>

@@ -41,21 +41,36 @@
          height: 100%;
       }
 
-      #demo {
+      /*显示回顶部按钮*/
+      #backTop {
          position: fixed;
          /*padding: 0.5rem 0.2rem;*/
          right: 0.3rem;
          bottom: 3rem;
          background-color: #e0e0e0;
+         border-radius:0.3rem;
          font-size: 0.8rem;
          height: 1.2rem;
          color: #212121;
          z-index: 999;
       }
+
+      /*显示拼团消息*/
+      #buyTip {
+         display: none;
+         position: fixed;
+         left: 0.2rem;
+         top: 2.5rem;
+         width:12rem;
+         font-size: 0.5rem;
+         height: 1rem;
+         border-radius:0.3rem;
+         z-index: 999;
+      }
    </style>
 </head>
 <body>
-<header class="aui-bar aui-bar-nav header-position">
+<header class="aui-bar aui-bar-nav header-position" style="background-color: #e5133d">
    <a class="aui-pull-left aui-btn">
       <span class="aui-iconfont aui-icon-left"></span>返回
    </a>
@@ -96,13 +111,6 @@
          纯色简洁大方，宽松时尚舒适，不管是内搭T恤还是衬衫都非常好看
       </p>
    </div>
-   <%-- <div class="aui-product-boutique">
-        <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
-        <span class="aui-product-tag-text">美国品牌</span>
-        <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-sj.png" alt="">
-        <span class="aui-product-tag-text">精选商家</span>
-
-    </div>--%>
 
    <div class="aui-product-boutique">
       <div style="float: left">
@@ -115,9 +123,12 @@
       </div>
    </div>
    <div class="Seg-line"></div>
-   <div>
+   <div id="groupCurrent">
       <ul class="aui-list ">
-
+         <li class="aui-list-header" style="height: 1.6rem;background-color: #FFFFfc;border-bottom:1px solid #eeeedd;">
+            <div style="float: left;">75人正在拼团，可直接参与</div>
+            <div style="float: right;"><a href="javascript:;">查看更多<i class="aui-iconfont aui-icon-right"></a></i></div>
+         </li>
          <li class="aui-list-item">
             <div class="aui-list-item-inner ">
                <div class="aui-list-item-left">
@@ -132,8 +143,8 @@
 
                <div class="aui-list-item-right" style="width:18rem;">
                   <div style="float: left;">
-                     <div><font size="1">还差<font color="red">2人</font>拼成</font></div>
-                     <div><font size="1">剩余19:21:24.5</font></div>
+                     <div style="align-items: center;"><font size="2px">还差<font color="red">2人</font>拼成</font></div>
+                     <div style="align-items: center;"><font size="1px">剩余19:21:24.5</font></div>
                   </div>
                   <div class="aui-btn aui-btn-danger" style="float: right;font-size: 0.5rem;">参与拼团</div>
                   <%--<div class="aui-badge" style="float: left;">88</div>--%>
@@ -163,9 +174,9 @@
             </div>
          </li>
       </ul>
-
    </div>
    <div class="Seg-line"></div>
+
    <div>
 
       <p style="height: 10rem;">中间内容部分1</p>
@@ -188,7 +199,11 @@
       <p>中间内容部分1</p>
    </div>
 </section>
-<div id="demo">顶部</div>
+<div id="backTop">回顶部</div>
+<div id="buyTip" class="aui-tips">
+   <i class="aui-iconfont aui-icon-info"></i>
+   <div class="aui-tips-title aui-ellipsis-1">消息提示条消息提示条消息提示条消息提示条消息提示条</div>
+</div>
 <footer class="aui-bar aui-bar-tab" style="font-size: 0.7rem;">
    <div class="aui-bar-tab-item" tapmode style="width: 2.3rem;">
       <i class="aui-iconfont aui-icon-home aui-text-gray"></i>
@@ -239,12 +254,41 @@
 
     }*/);
 
-   $("#demo").click(function () {
+   $("#backTop").click(function () {
 //        if(scrollTop<=50){return;}
       $('body').animate({
          scrollTop: 0
       }, 100);
    });
    /*滚动回到顶部*/
+
+   /*$('body').everyTime('1s',function(){
+      alert('101010');
+      var buyTip=$('#buyTip');
+      var displayTag=buyTip.style.display;
+      if(displayFlag.isEqual('none')){
+         $('#buyTip').style.display='';
+      }else {
+         $('#buyTip').display='none';
+      }
+   });*/
+
+   setInterval("showBuyTip()",2000);//1000为1秒钟
+   var timeCount=0;
+   function showBuyTip(){
+      timeCount=timeCount+1;
+
+//      alert('101010');
+      var buyTip=document.getElementById("buyTip");
+      var displayTag=buyTip.style.display;
+      document.getElementById("backTop").textContent="次数"+displayTag;
+      if(displayFlag==none){
+         $('#buyTip').style.display='';
+      }else {
+         $('#buyTip').style.display='none';
+      }
+   }
+
+
 </script>
 </html>

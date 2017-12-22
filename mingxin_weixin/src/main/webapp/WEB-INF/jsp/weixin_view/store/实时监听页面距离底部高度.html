@@ -7,7 +7,7 @@
     <title>AUI快速完成布局</title>
     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <style type="text/css">
-        #demo {
+        #backTop {
             position: fixed;
             padding: 0.5rem 0.2rem;
             right: 0;
@@ -388,9 +388,9 @@
         distance:200 //判断到达底部的距离，isToBottom为true
     },function(ret){
         if(ret.isToBottom){
-            document.getElementById("demo").textContent = "已到达底部";
+            document.getElementById("backTop").textContent = "已到达底部";
         }else{
-            document.getElementById("demo").textContent = "滚动高度："+ret.scrollTop;
+            document.getElementById("backTop").textContent = "滚动高度："+ret.scrollTop;
         }
 
     });
