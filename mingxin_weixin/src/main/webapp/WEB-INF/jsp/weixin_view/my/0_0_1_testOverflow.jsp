@@ -48,7 +48,7 @@
          right: 0.3rem;
          bottom: 3rem;
          background-color: #e0e0e0;
-         border-radius:0.3rem;
+         border-radius: 0.3rem;
          font-size: 0.8rem;
          height: 1.2rem;
          color: #212121;
@@ -61,12 +61,11 @@
          position: fixed;
          left: 0.2rem;
          top: 2.5rem;
-         width:12rem;
-         font-size: 0.5rem;
-         height: 1rem;
-         border-radius:0.3rem;
+         border-radius: 0.5rem;
          z-index: 999;
       }
+
+
    </style>
 </head>
 <body>
@@ -199,10 +198,15 @@
       <p>中间内容部分1</p>
    </div>
 </section>
-<div id="backTop">回顶部</div>
-<div id="buyTip" class="aui-tips">
-   <i class="aui-iconfont aui-icon-info"></i>
-   <div class="aui-tips-title aui-ellipsis-1">消息提示条消息提示条消息提示条消息提示条消息提示条</div>
+<div id="backTop" style="display: none;">回顶部</div>
+<div id="buyTip">
+   <div class="aui-tips" style="height: 1rem;border-radius: 0.3rem;">
+      <img style="width: 1rem;height: 1rem;"
+           src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
+      <%--<i class="aui-iconfont aui-icon-info">111111</i>--%>
+      <div class="aui-ellipsis-1" style="max-width:4rem;font-size:0.6rem;padding-right: 0.2rem;">LM小小的天猫猫猫</div>
+      <div class="aui-tips-title aui-ellipsis-1">5小时前参与了该拼团</div>
+   </div>
 </div>
 <footer class="aui-bar aui-bar-tab" style="font-size: 0.7rem;">
    <div class="aui-bar-tab-item" tapmode style="width: 2.3rem;">
@@ -233,7 +237,7 @@
       // "width":300,
       "height": 240,
       "speed": 500,
-      "autoPlay": 5000, //自动播放
+      "autoPlay": 8000, //自动播放
       "loop": true,
       "pageShow": true,
       "pageStyle": 'dot',
@@ -245,14 +249,24 @@
    var scroll = new auiScroll({
       listen: true,
       distance: 200 //判断到达底部的距离，isToBottom为true
-   }/*,function(ret){
-    if(ret.isToBottom){
+   },function(ret){
+
+      if($('#backTop').is(':visible')){return;}
+//      var scrollTop=ret.scrollTop;
+      if(ret.scrollTop>300&&!$('#backTop').is(':visible')){
+//         alert("101010");
+         $('#backTop').show();
+      }else{
+//         alert("101010");
+         $('#backTop').hide();
+      }
+    /*if(ret.isToBottom){
     document.getElementById("demo").textContent = "已到达底部";
     }else{
     document.getElementById("demo").textContent = "滚动高度："+ret.scrollTop;
-    }
+    }*/
 
-    }*/);
+    });
 
    $("#backTop").click(function () {
 //        if(scrollTop<=50){return;}
@@ -262,33 +276,21 @@
    });
    /*滚动回到顶部*/
 
-   /*$('body').everyTime('1s',function(){
-      alert('101010');
-      var buyTip=$('#buyTip');
-      var displayTag=buyTip.style.display;
-      if(displayFlag.isEqual('none')){
-         $('#buyTip').style.display='';
-      }else {
-         $('#buyTip').display='none';
+
+   /*定时弹出购买小条*/
+//   var timeCount = 0;
+   setInterval(function () {
+//      timeCount = timeCount + 1;
+      if (!$('#buyTip').is(':visible')) {
+         $('#buyTip').show();
+         setTimeout(function () {
+            $('#buyTip').hide();//将tip标签隐藏。
+         }, 5000);
       }
-   });*/
 
-   setInterval("showBuyTip()",2000);//1000为1秒钟
-   var timeCount=0;
-   function showBuyTip(){
-      timeCount=timeCount+1;
-
-//      alert('101010');
-      var buyTip=document.getElementById("buyTip");
-      var displayTag=buyTip.style.display;
-      document.getElementById("backTop").textContent="次数"+displayTag;
-      if(displayFlag==none){
-         $('#buyTip').style.display='';
-      }else {
-         $('#buyTip').style.display='none';
-      }
-   }
-
+//      document.getElementById("backTop").textContent = "次数" + timeCount;
+   }, 15000);//1000为1秒钟
+   /*定时弹出购买小条*/
 
 </script>
 </html>
