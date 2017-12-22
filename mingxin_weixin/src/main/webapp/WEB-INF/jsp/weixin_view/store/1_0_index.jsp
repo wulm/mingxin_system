@@ -55,12 +55,12 @@
       <div id="aui-slide3">
          <div class="aui-slide-wrap">
             <div class="aui-slide-node bg-dark">
-               <a href="<%=basePath%>zzy/actDetail.htm">
+               <a href="<%=basePath%>zzy/actDetail2.htm">
                   <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/>
                </a>
             </div>
             <div class="aui-slide-node bg-dark">
-               <a href="<%=basePath%>zzy/actDetail.htm">
+               <a href="<%=basePath%>zzy/actDetail2.htm">
                   <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/>
                </a>
             </div>

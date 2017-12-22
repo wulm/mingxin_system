@@ -70,7 +70,7 @@
 </head>
 <body>
 <header class="aui-bar aui-bar-nav header-position" style="background-color: #e5133d">
-   <a class="aui-pull-left aui-btn">
+   <a class="aui-pull-left aui-btn" href="javascript:history.back(-1)">
       <span class="aui-iconfont aui-icon-left"></span>返回
    </a>
    <div class="aui-title">活动详情</div>
@@ -92,25 +92,21 @@
       <div class="aui-slide-page-wrap"><!--分页容器--></div>
    </div>
 
-   <div class="aui-real-price">
-			<span>
-				<i>￥</i>399.00
-			</span>
-      <span class="aui-font-num"><del>￥699</del></span>
-        <span class="aui-settle-choice">
-            <span>促销价</span>
-        </span>
+   <div style="width:100%;text-align: right;">
+      <%--<span class="aui-font-size-18" style="color: red;"><i>￥</i>399.00</span>
+      <span class="aui-font-size-14"><del>￥699</del></span>--%>
+      <div class="aui-font-size-12" style="padding-right: 0.5rem;">活动倒计时:<font color="red">5天6时25分钟27秒</font></div>
    </div>
    <%--<br/>--%>
    <div class="aui-product-title">
       <h2>
-         茵曼2017秋装新款小清新文艺圆领长袖条纹针织衫女套头【1873132218】 酒红色 L茵曼2017秋装新款小清新文艺圆领长袖条纹针织衫女套头
+         古田高岗露营，触摸自然，感受自然，倾听自然，更要喝到自然。不一样的青春，从现在开始，体会生活，享受刺激，尽在自架露营旅行社。
       </h2>
       <p>
-         纯色简洁大方，宽松时尚舒适，不管是内搭T恤还是衬衫都非常好看
+         丢下书本，丢下繁杂，静下心来感受这里的美…，要青春就是要激情，奔跑吧？青年…，你会用相机拍下每个美的瞬间，因为这里的每个地方都很美…
       </p>
    </div>
-
+   <div class="Seg-line"></div>
    <div class="aui-product-boutique">
       <div style="float: left">
          <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
@@ -118,7 +114,7 @@
       </div>
       <div>
          <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-sj.png" alt="">
-         <span class="aui-product-tag-text">精选商家</span>
+         <span class="aui-product-tag-text">精品旅途</span>
       </div>
    </div>
    <div class="Seg-line"></div>
@@ -129,36 +125,44 @@
             <div style="float: right;"><a href="javascript:;">查看更多<i class="aui-iconfont aui-icon-right"></i></a></div>
          </li>
          <li class="aui-list-item aui-list-item-middle">
-            <div class="aui-media-list-item-inner" style="width: 100%;">
-               <div class="aui-list-item-media" style="width:13%;">
-                  <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" class="aui-img-round aui-list-img-sm">
+            <div class="aui-media-list-item-inner">
+               <div class="aui-list-item-media" style="width: 2rem;">
+                  <img src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" class="aui-img-round">
                </div>
-               <div class="aui-list-item-inner " style="width:29%;">
-                  流浪男
-               </div>
-               <div class="aui-list-item-right" style="font-size: 0.5rem;width:28%;">
-                  <div ><font size="2px">还差<font color="red">2人</font>拼成</font></div>
-                  <div >剩余20:50:41.08</div>
-               </div>
+               <div class="aui-list-item-inner aui-ellipsis-1 aui-font-size-14">小红小红小红小红</div>
                <div class="aui-list-item-right " >
-                  <div class="aui-btn aui-btn-danger" style="font-size: 0.5rem;">参与拼团</div>
+                  <div class="aui-list-item-text " >
+                     <div class="aui-list-item-title aui-font-size-12 aui-ellipsis-1">
+                        还差<font color="red">2人</font>拼成
+                     </div>
+                  </div>
+                  <div class="aui-list-item-text aui-ellipsis-1">
+                     <font size="1;">剩余20:22:51.07</font>
+                  </div>
+               </div>
+               <div class="aui-list-item-right " style="padding-right: 0.6rem;">
+                  <div class="aui-btn aui-btn-danger aui-font-size-12" >去拼团</div>
                </div>
             </div>
          </li>
          <li class="aui-list-item aui-list-item-middle">
-            <div class="aui-media-list-item-inner" style="width: 100%;">
-               <div class="aui-list-item-media" style="width:13%;">
-                  <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" class="aui-img-round aui-list-img-sm">
+            <div class="aui-media-list-item-inner">
+               <div class="aui-list-item-media" style="width: 2rem;">
+                  <img src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" class="aui-img-round">
                </div>
-               <div class="aui-list-item-inner " style="width:29%;">
-                  流浪男
-               </div>
-               <div class="aui-list-item-right" style="font-size: 0.5rem;width:28%;">
-                  <div ><font size="2px">还差<font color="red">2人</font>拼成</font></div>
-                  <div >剩余20:50:41.08</div>
-               </div>
+               <div class="aui-list-item-inner aui-ellipsis-1 aui-font-size-14">小红小红小红小红</div>
                <div class="aui-list-item-right " >
-                  <div class="aui-btn aui-btn-danger" style="font-size: 0.5rem;">参与拼团</div>
+                  <div class="aui-list-item-text " >
+                     <div class="aui-list-item-title aui-font-size-12 aui-ellipsis-1">
+                        还差<font color="red">1人</font>拼成
+                     </div>
+                  </div>
+                  <div class="aui-list-item-text aui-ellipsis-1">
+                     <font size="1;">剩余20:22:51.07</font>
+                  </div>
+               </div>
+               <div class="aui-list-item-right " style="padding-right: 0.6rem;">
+                  <div class="aui-btn aui-btn-danger aui-font-size-12" >去拼团</div>
                </div>
             </div>
          </li>
@@ -174,8 +178,8 @@
          <li class="aui-list-item" style="padding-right:0.3rem; ">
             <div class="aui-info" style="padding:0.2rem ;">
                <div class="aui-info-item">
-                  <img src="<%=basePath%>resources/test/my/image/liulangnan.png" style="width:1rem" class="aui-img-round" />
-                  <span class="aui-margin-l-5">流浪男</span>
+                  <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png" style="width:1rem"  />
+                  <span class="aui-margin-l-5">爱玩的大脸猫</span>
                </div>
                <div class="aui-info-item">2017.07.14 </div>
             </div>
@@ -190,7 +194,7 @@
                      </div>
                   </div>
                   <div class="aui-list-item-text aui-ellipsis-1" style="font-size: 0.6rem;">
-                     颜色:羊羔绒【红色】 尺寸:1.2米床【约5.2斤重】
+                     分类:漂流【蘑菇部落】 风车寻宝【高岗】 帐篷【1.5米双人】
                   </div>
                </div>
             </div>
@@ -198,8 +202,8 @@
          <li class="aui-list-item" style="padding-right:0.3rem; ">
             <div class="aui-info" style="padding:0.2rem ;">
                <div class="aui-info-item">
-                  <img src="<%=basePath%>resources/test/my/image/liulangnan.png" style="width:1rem" class="aui-img-round" />
-                  <span class="aui-margin-l-5">流浪男</span>
+                  <img class="aui-img-round" src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" style="width:1rem" />
+                  <span class="aui-margin-l-5">小明小明小明</span>
                </div>
                <div class="aui-info-item">2017.07.14 </div>
             </div>
@@ -214,7 +218,7 @@
                      </div>
                   </div>
                   <div class="aui-list-item-text aui-ellipsis-1" style="font-size: 0.6rem;">
-                     颜色:羊羔绒【红色】 尺寸:1.2米床【约5.2斤重】
+                     分类:风车寻宝【高岗】 帐篷【1.5米双人】
                   </div>
                </div>
             </div>
@@ -223,7 +227,32 @@
       </ul>
 
    </div>
+   <div class="Seg-line"></div>
+   <div class="aui-content aui-margin-b-15">
+   <ul class="aui-list aui-media-list">
 
+      <li class="aui-list-item aui-list-item-middle">
+         <div class="aui-media-list-item-inner">
+            <div class="aui-list-item-media" style="width: 3rem;">
+               <img src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" class=" aui-list-img-sm">
+            </div>
+            <div class="aui-list-item-inner " style="max-width: 8.5rem;">
+               <div class="aui-list-item-text " >
+                  <div class="aui-list-item-title aui-font-size-14 aui-ellipsis-1">
+                     风之谷户外拓展
+                  </div>
+               </div>
+               <div class="aui-list-item-text aui-ellipsis-1">
+                  <font size="1;"> 已开展81场活动&nbsp;&nbsp;&nbsp;&nbsp;5场进行中</font>
+               </div>
+            </div>
+            <div class="aui-list-item-right ">
+               <div class="aui-btn aui-btn-default" style="right: 0.6rem;"><span class="aui-iconfont aui-icon-home"></span>进入逛逛</div>
+            </div>
+         </div>
+      </li>
+   </ul>
+   </div>
 
    <div>
 
@@ -250,9 +279,8 @@
 <div id="backTop" style="display: none;">回顶部</div>
 <div id="buyTip">
    <div class="aui-tips" style="height: 1rem;border-radius: 0.3rem;">
-      <img style="width: 1rem;height: 1rem;"
+      <img class="aui-img-round" style="width: 1rem;height: 1rem;"
            src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
-      <%--<i class="aui-iconfont aui-icon-info">111111</i>--%>
       <div class="aui-ellipsis-1" style="max-width:4rem;font-size:0.6rem;padding-right: 0.2rem;">LM小小的天猫猫猫</div>
       <div class="aui-tips-title aui-ellipsis-1">5小时前参与了该拼团</div>
    </div>
