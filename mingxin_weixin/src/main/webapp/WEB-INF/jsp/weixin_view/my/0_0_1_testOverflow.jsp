@@ -16,8 +16,11 @@
    <link rel="stylesheet" href="<%=basePath%>resources/test/my/css/home.css">
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-slide.css"/>
-   <style type="text/css">
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-flex.css"/>
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/popGroupChoices.css"/>
+   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/jquery-labelauty.css"/>
 
+   <style type="text/css">
       .header-position {
          position: fixed;
          top: 0;
@@ -64,21 +67,30 @@
          border-radius: 0.5rem;
          z-index: 999;
       }
-
-
    </style>
 </head>
 <body>
+<%--顶部固定标题栏--%>
 <header class="aui-bar aui-bar-nav header-position" style="background-color: #e5133d">
    <a class="aui-pull-left aui-btn" href="javascript:history.back(-1)">
       <span class="aui-iconfont aui-icon-left"></span>返回
    </a>
    <div class="aui-title">活动详情</div>
 </header>
-<section class="aui-content content-positon">
+<%--活动详情主页面--%>
+<section id="actBody" class="aui-content content-positon">
 
    <div id="aui-slide3">
       <div class="aui-slide-wrap">
+         <div class="aui-slide-node bg-dark">
+            <img src="<%=basePath%>resources/test/my/image/l1.png"/>
+         </div>
+         <div class="aui-slide-node bg-dark">
+            <img src="<%=basePath%>resources/test/my/image/l2.png"/>
+         </div>
+         <div class="aui-slide-node bg-dark">
+            <img src="<%=basePath%>resources/test/my/image/l3.png"/>
+         </div>
          <div class="aui-slide-node bg-dark">
             <img src="<%=basePath%>resources/test/my/image/l1.png"/>
          </div>
@@ -92,22 +104,26 @@
       <div class="aui-slide-page-wrap"><!--分页容器--></div>
    </div>
 
-   <div style="width:100%;text-align: right;">
-      <%--<span class="aui-font-size-18" style="color: red;"><i>￥</i>399.00</span>
-      <span class="aui-font-size-14"><del>￥699</del></span>--%>
-      <div class="aui-font-size-12" style="padding-right: 0.5rem;">活动倒计时:<font color="red">5天6时25分钟27秒</font></div>
+   <%--倒计时--%>
+   <div id="leftTime" style="width:100%;text-align: right;">
+      <div class="aui-font-size-12" style="padding-right: 0.5rem;">倒计时:<font color="red">5天6时25分钟27秒</font></div>
    </div>
-   <%--<br/>--%>
-   <div class="aui-product-title">
-      <h2>
-         古田高岗露营，触摸自然，感受自然，倾听自然，更要喝到自然。不一样的青春，从现在开始，体会生活，享受刺激，尽在自架露营旅行社。
-      </h2>
-      <p>
+   <%--活动标题--%>
+   <div id="actTitle" class="aui-margin-t-10">
+      <h4 class="aui-ellipsis-2">
+         <strong>古田高岗露营，触摸自然，感受自然，倾听自然，更要喝到自然。</strong>
+      </h4>
+      <p class="aui-ellipsis-3">
          丢下书本，丢下繁杂，静下心来感受这里的美…，要青春就是要激情，奔跑吧？青年…，你会用相机拍下每个美的瞬间，因为这里的每个地方都很美…
       </p>
+      <div class="aui-font-size-12 aui-padded-5">
+         <span class="aui-iconfont aui-icon-date"></span>
+         活动时间：2017.04.20（周六）、2017.04.21(周日)
+      </div>
    </div>
    <div class="Seg-line"></div>
-   <div class="aui-product-boutique">
+   <%--店铺标签--%>
+   <div id="shopTags" class="aui-product-boutique">
       <div style="float: left">
          <img src="<%=basePath%>resources/test/store/themes/img/icon/icon-usa.png" alt="">
          <span class="aui-product-tag-text">美国品牌</span>
@@ -118,165 +134,412 @@
       </div>
    </div>
    <div class="Seg-line"></div>
+   <%--当前正在进行中的拼团--%>
    <div id="groupCurrent">
-      <ul class="aui-list ">
-         <li class="aui-list-header" style="height: 1.6rem;background-color: #FFFFfc;border-bottom:1px solid #eeeedd;">
-            <div style="float: left;">75人正在拼团，可直接参与</div>
-            <div style="float: right;"><a href="javascript:;">查看更多<i class="aui-iconfont aui-icon-right"></i></a></div>
-         </li>
-         <li class="aui-list-item aui-list-item-middle">
-            <div class="aui-media-list-item-inner">
-               <div class="aui-list-item-media" style="width: 2rem;">
-                  <img src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" class="aui-img-round">
-               </div>
-               <div class="aui-list-item-inner aui-ellipsis-1 aui-font-size-14">小红小红小红小红</div>
-               <div class="aui-list-item-right " >
-                  <div class="aui-list-item-text " >
-                     <div class="aui-list-item-title aui-font-size-12 aui-ellipsis-1">
-                        还差<font color="red">2人</font>拼成
-                     </div>
-                  </div>
-                  <div class="aui-list-item-text aui-ellipsis-1">
-                     <font size="1;">剩余20:22:51.07</font>
-                  </div>
-               </div>
-               <div class="aui-list-item-right " style="padding-right: 0.6rem;">
-                  <div class="aui-btn aui-btn-danger aui-font-size-12" >去拼团</div>
-               </div>
-            </div>
-         </li>
-         <li class="aui-list-item aui-list-item-middle">
-            <div class="aui-media-list-item-inner">
-               <div class="aui-list-item-media" style="width: 2rem;">
-                  <img src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" class="aui-img-round">
-               </div>
-               <div class="aui-list-item-inner aui-ellipsis-1 aui-font-size-14">小红小红小红小红</div>
-               <div class="aui-list-item-right " >
-                  <div class="aui-list-item-text " >
-                     <div class="aui-list-item-title aui-font-size-12 aui-ellipsis-1">
-                        还差<font color="red">1人</font>拼成
-                     </div>
-                  </div>
-                  <div class="aui-list-item-text aui-ellipsis-1">
-                     <font size="1;">剩余20:22:51.07</font>
-                  </div>
-               </div>
-               <div class="aui-list-item-right " style="padding-right: 0.6rem;">
-                  <div class="aui-btn aui-btn-danger aui-font-size-12" >去拼团</div>
-               </div>
-            </div>
-         </li>
-      </ul>
-   </div>
-   <div class="Seg-line"></div>
-   <div id="actAppraise">
-      <ul class="aui-list aui-media-list">
-         <li class="aui-list-header" style="height: 1.6rem;background-color: #FFFFfc;border-bottom:1px solid #eeeedd;">
-            <div style="float: left;">活动评价（51）</div>
-            <div style="float: right;"><a href="javascript:;">查看全部<i class="aui-iconfont aui-icon-right"></i></a></div>
-         </li>
-         <li class="aui-list-item" style="padding-right:0.3rem; ">
-            <div class="aui-info" style="padding:0.2rem ;">
-               <div class="aui-info-item">
-                  <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png" style="width:1rem"  />
-                  <span class="aui-margin-l-5">爱玩的大脸猫</span>
-               </div>
-               <div class="aui-info-item">2017.07.14 </div>
-            </div>
-            <div class="aui-media-list-item-inner">
-               <%--<div class="aui-list-item-media">
-                  <img src="<%=basePath%>resources/test/my/image/demo1.png">
-               </div>--%>
-               <div class="aui-list-item-inner">
-                  <div class="aui-list-item-text">
-                     <div class="aui-list-item-title aui-ellipsis-2" style="font-size: 0.7rem;">
-                        活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好
-                     </div>
-                  </div>
-                  <div class="aui-list-item-text aui-ellipsis-1" style="font-size: 0.6rem;">
-                     分类:漂流【蘑菇部落】 风车寻宝【高岗】 帐篷【1.5米双人】
-                  </div>
-               </div>
-            </div>
-         </li>
-         <li class="aui-list-item" style="padding-right:0.3rem; ">
-            <div class="aui-info" style="padding:0.2rem ;">
-               <div class="aui-info-item">
-                  <img class="aui-img-round" src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" style="width:1rem" />
-                  <span class="aui-margin-l-5">小明小明小明</span>
-               </div>
-               <div class="aui-info-item">2017.07.14 </div>
-            </div>
-            <div class="aui-media-list-item-inner">
-               <%--<div class="aui-list-item-media">
-                  <img src="<%=basePath%>resources/test/my/image/demo1.png">
-               </div>--%>
-               <div class="aui-list-item-inner">
-                  <div class="aui-list-item-text">
-                     <div class="aui-list-item-title aui-ellipsis-2" style="font-size: 0.7rem;">
-                        活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好活动个非常好
-                     </div>
-                  </div>
-                  <div class="aui-list-item-text aui-ellipsis-1" style="font-size: 0.6rem;">
-                     分类:风车寻宝【高岗】 帐篷【1.5米双人】
-                  </div>
-               </div>
-            </div>
-         </li>
+      <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b  aui-padded-5">
+         <div class="aui-flex-item-8 aui-flex-row aui-flex-middle aui-flex-left aui-font-size-12">75人正在拼团，可直接参与</div>
+         <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-flex-right aui-font-size-12">
+            <a href="javascript:;">
+               查看更多<i class="aui-iconfont aui-icon-right"></i>
+            </a>
+         </div>
+      </div>
 
-      </ul>
-
-   </div>
-   <div class="Seg-line"></div>
-   <div class="aui-content aui-margin-b-15">
-   <ul class="aui-list aui-media-list">
-
-      <li class="aui-list-item aui-list-item-middle">
-         <div class="aui-media-list-item-inner">
-            <div class="aui-list-item-media" style="width: 3rem;">
-               <img src="http://wx.qlogo.cn/mmopen/gITwFOywPbkCx8BxwYc41oAGjuBeFianAbtHl8URmaCMTe9lib6EicNuHSibGJzSfT6Y88Nos1poHITnB7vUs7foHphNpibcgFEja/0" class=" aui-list-img-sm">
-            </div>
-            <div class="aui-list-item-inner " style="max-width: 8.5rem;">
-               <div class="aui-list-item-text " >
-                  <div class="aui-list-item-title aui-font-size-14 aui-ellipsis-1">
-                     风之谷户外拓展
-                  </div>
-               </div>
-               <div class="aui-list-item-text aui-ellipsis-1">
-                  <font size="1;"> 已开展81场活动&nbsp;&nbsp;&nbsp;&nbsp;5场进行中</font>
-               </div>
-            </div>
-            <div class="aui-list-item-right ">
-               <div class="aui-btn aui-btn-default" style="right: 0.6rem;"><span class="aui-iconfont aui-icon-home"></span>进入逛逛</div>
+      <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b">
+         <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
+            <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
+         </div>
+         <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
+            <div class="aui-font-size-14 aui-ellipsis-1">
+               小明小明小明小明小明小明
             </div>
          </div>
-      </li>
-   </ul>
+         <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-flex-right">
+            <div class="aui-font-size-12 aui-ellipsis-1">
+               还差<font color="red">15人</font>拼成
+            </div>
+            <div class="aui-font-size-10 aui-ellipsis-1">
+               剩余21:11:11.03
+            </div>
+         </div>
+         <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
+            <div class="aui-btn aui-btn-danger  aui-font-size-12">
+               去拼团
+            </div>
+         </div>
+      </div>
+
+      <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b">
+         <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
+            <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
+         </div>
+         <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
+            <div class="aui-font-size-14 aui-ellipsis-1">
+               小明小明小明小明小明小明
+            </div>
+         </div>
+         <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-flex-right">
+            <div class="aui-font-size-12 aui-ellipsis-1">
+               还差<font color="red">15人</font>拼成
+            </div>
+            <div class="aui-font-size-10 aui-ellipsis-1">
+               剩余21:11:11.03
+            </div>
+         </div>
+         <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
+            <div class="aui-btn aui-btn-danger  aui-font-size-12">
+               去拼团
+            </div>
+         </div>
+      </div>
    </div>
+   <div class="Seg-line"></div>
+   <%--活动评价--%>
+   <div id="actAppraise">
+      <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b  aui-padded-5 ">
+         <div class="aui-flex-item-8 aui-flex-row aui-flex-left aui-font-size-12">活动评价（1241）</div>
+         <div class="aui-flex-item-4 aui-flex-row aui-flex-right aui-font-size-12">
+            <a href="javascript:;">
+               查看全部<i class="aui-iconfont aui-icon-right"></i>
+            </a>
+         </div>
+      </div>
+      <div class="aui-flex-row aui-padded-5 aui-padded-b-0 aui-border-b">
+         <div class="aui-flex-col  aui-font-size-12" style="height: 1.2rem;">
+            <div class="aui-flex-item-8 aui-flex-col">
+               <img class="aui-img-round" style="width: 1rem;height: 1rem;margin-right: 0.5rem;"
+                    src="<%=basePath%>resources/test/my/image/liulangnan.png">
+               爱玩的大脸猫
+            </div>
+            <div class="aui-flex-item-4 aui-flex-col aui-flex-right">
+               2017.08.12
+            </div>
+         </div>
+         <div class="aui-flex-col aui-padded-5 aui-padded-t-0">
+            <p class="aui-ellipsis-2 aui-font-size-14">
+               活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。
+            </p>
+         </div>
+         <div class="aui-flex-col aui-padded-5 ">
+            <p class="aui-ellipsis-1 aui-font-size-10">
+               <strong>类型：漂流【3人艇】 露营【3人帐篷】 包午餐</strong>
+            </p>
+         </div>
+      </div>
+      <div class="aui-flex-row aui-padded-5 aui-padded-b-0 aui-border-b">
+         <div class="aui-flex-col  aui-font-size-12" style="height: 1.2rem;">
+            <div class="aui-flex-item-8 aui-flex-col">
+               <img class="aui-img-round" style="width: 1rem;height: 1rem;margin-right: 0.5rem;"
+                    src="<%=basePath%>resources/test/my/image/liulangnan.png">
+               爱玩的大脸猫
+            </div>
+            <div class="aui-flex-item-4 aui-flex-col aui-flex-right">
+               2017.08.12
+            </div>
+         </div>
+         <div class="aui-flex-col aui-padded-5 aui-padded-t-0">
+            <p class="aui-ellipsis-2 aui-font-size-14">
+               活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。活动非常有趣。
+            </p>
+         </div>
+         <div class="aui-flex-col aui-padded-5 ">
+            <p class="aui-ellipsis-1 aui-font-size-10">
+               <strong>类型：漂流【3人艇】 露营【3人帐篷】 包午餐</strong>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="Seg-line"></div>
+   <%--跳转到店铺--%>
+   <div id="goToShop" class="aui-margin-5">
+      <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b">
+         <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+         </div>
 
-   <div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-flex-left">
+            <div class="aui-font-size-14 aui-ellipsis-1">
+               风之谷户外拓展
+            </div>
+            <div class="aui-font-size-8 aui-ellipsis-1">
+               已开<font color="red">535</font>次活动&nbsp;&nbsp;&nbsp;<font color="red">27</font>场进行中
+            </div>
+         </div>
+         <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-padded-10">
+            <div class="aui-btn aui-btn-default  aui-font-size-12">
+               <span class="aui-iconfont aui-icon-home"></span>
+               去逛逛
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="Seg-line"></div>
+   <%--活动描述部分--%>
+   <div id="actDescribe" >
+      <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b  aui-padded-10 ">
+         <div class="aui-flex-item-12 aui-flex-row aui-flex-left aui-font-size-14">活动详情</div>
 
-      <p style="height: 10rem;">中间内容部分1</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p style="height: 10rem;">中间内容部分</p>
-      <p>中间内容部分10</p>
-      <p>中间内容部分9</p>
-      <p>中间内容部分8</p>
-      <p>中间内容部分7</p>
-      <p>中间内容部分6</p>
-      <p>中间内容部分5</p>
-      <p>中间内容部分4</p>
-      <p>中间内容部分3</p>
-      <p>中间内容部分2</p>
-      <p>中间内容部分1</p>
+      </div>
+      <div class="aui-flex-row aui-padded-b-0 aui-border-b">
+         <div class="aui-flex-col aui-padded-0">
+            <p class=" aui-font-size-12  aui-padded-5">
+               活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。
+            </p>
+            <div><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/></div>
+            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/></div>
+            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/></div>
+            <div><img src="http://fa1.cnlinfo.net/up/info1/16091910120517781201.jpg"/></div>
+            <div><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/></div>
+            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/></div>
+            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/></div>
+            <div><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/></div>
+            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/></div>
+            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/></div>
+            <div><img src="http://fa1.cnlinfo.net/up/info1/16091910120517781201.jpg"/></div>
+         </div>
+      </div>
+      <div class="aui-flex-row">
+            <div class="aui-list aui-collapse ">
+               <div class="aui-collapse-item  aui-font-size-12">
+                  <div class="aui-list-item aui-collapse-header" tapmode >
+                     <div class="aui-list-item-inner ">
+                        <div class="aui-list-item-title">价格声明</div>
+                        <div class="aui-list-item-right">
+                           <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="aui-collapse-content aui-padded-15 aui-font-size-10">
+                     <p>单独参与价格：是您发起1人团时活动的原价。</p>
+                     <p>发起拼团价格：根据活动组织方定义，拼主享有的活动价格优惠。</p>
+                     <p>参团价格：是您参加好友发起的活动拼团价格。</p>
+                     <p>划线价格：活动组织方提供的活动参考价格，并非《价格法》、《禁止价格欺诈行为的规定》规定的“原价”，仅供参考。</p>
+                     <p>特别提醒：实际成交价格根据您选择的团购人数、时间、礼品、保险等发生变化，最终以订单结算页的价格为准。若组织方单独对活动价格进行定义的，以组织方的表述为准。</p>
+                  </div>
+
+               </div>
+            </div>
+
+      </div>
+   </div>
+   <div class="Seg-line"></div>
+   <%--为你推荐--%>
+   <div id="recommendForYou" class="aui-content">
+      <div style="text-align: center;" class="aui-font-size-14">
+         <span class="aui-iconfont aui-icon-like" style="color: red;"></span>
+         为你推荐
+      </div>
+
+      <div class="aui-flex-col aui-flex-left " >
+
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border" >
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
+            <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
+            <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
+            <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
+               <div class="aui-flex-item-6 ">
+                  <p class="aui-text-danger aui-font-size-16 aui-flex-row aui-flex-left">￥68.7</p>
+               </div>
+               <div class="aui-flex-item-6 aui-font-size-12 aui-flex-row aui-flex-right">
+                  已参加79人
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <div style="text-align: center;padding: 1rem 0;font-size: 0.7rem;">----------------------到达底部----------------------</div>
    </div>
 </section>
+<%--弹出活动选择框--%>
+<div id="actChoices">
+   <div id="modal" class="modal"></div>
+   <%--弹出窗遮罩层--%>
+   <div class="modal-frame" id="modal-frame">
+
+      <div >顶部</div>
+      <div style="height: 80%;"><%--内容部分--%>
+         <div class="aui-flex-col aui-flex-center aui-border-tb">
+            <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-padded-10">
+               <h3 class="aui-text-danger">淘抢购</h3>
+               <p>可爱的你会喜欢</p>
+               <img src="../image/f1.jpg">
+            </div>
+            <div class="aui-flex-item-8 aui-border-l">
+               <div class="aui-flex-col aui-padded-10 aui-border-b">
+                  <div class="aui-flex-item-12">
+                     <div class="aui-flex-item-9">
+                        <h3 class="aui-text-info">有好货</h3>
+                        <p>好品味从挑剔开始</p>
+                     </div>
+                     <div class="aui-flex-item-3 aui-text-right"><img src="../image/f2.jpg"></div>
+                  </div>
+               </div>
+               <div class="aui-flex-col">
+                  <div class="aui-flex-item-6 aui-padded-10" style="position: relative;">
+                     <h5 class="aui-text-warning">爱逛街</h5>
+                     <p>疯狂赛车来袭</p>
+                     <img src="../image/f3.jpg">
+                  </div>
+                  <div class="aui-flex-item-6 aui-padded-10 aui-border-l">
+                     <h5 class="aui-text-success">必买清单</h5>
+                     <p>都帮你整理好啦</p>
+                     <img src="../image/f5.jpg">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <div  style="color: white;background-color: red;text-align: center;">确定</div>
+   </div>
+</div>
+<%--回顶部按钮--%>
 <div id="backTop" style="display: none;">回顶部</div>
+<%--弹出拼团小提示--%>
 <div id="buyTip">
    <div class="aui-tips" style="height: 1rem;border-radius: 0.3rem;">
       <img class="aui-img-round" style="width: 1rem;height: 1rem;"
@@ -285,6 +548,7 @@
       <div class="aui-tips-title aui-ellipsis-1">5小时前参与了该拼团</div>
    </div>
 </div>
+<%--底部固定拼团按钮--%>
 <footer class="aui-bar aui-bar-tab" style="font-size: 0.7rem;">
    <div class="aui-bar-tab-item" tapmode style="width: 2.3rem;">
       <i class="aui-iconfont aui-icon-home aui-text-gray"></i>
@@ -298,26 +562,69 @@
       <i class="aui-iconfont aui-icon-comment aui-text-danger"></i>
       <div class="aui-bar-tab-label aui-text-danger">客服</div>
    </div>
-   <div class="aui-bar-tab-item aui-bg-warning aui-text-white" tapmode style="width: auto;">参与拼团</div>
-   <div class="aui-bar-tab-item aui-bg-danger aui-text-white" tapmode style="width: auto;">发起拼团</div>
+   <div class="aui-bar-tab-item aui-bg-warning aui-text-white js-open-modal" tapmode style="width: auto;">参与拼团</div>
+   <div class="aui-bar-tab-item aui-bg-danger aui-text-white js-open-modal" tapmode style="width: auto;">发起拼团</div>
 </footer>
 </body>
 
-<script type="text/javascript" src="<%=basePath%>resources/test/my/js/jquery.min.js"></script>
+<script src="<%=basePath%>resources/test/my/js/popGroupChoices.js"></script>
+<%--弹出选项js--%>
+
+<script src="<%=basePath%>resources/test/store/themes/js/jquery.min.js"></script>
+
+<script src="<%=basePath%>resources/test/my/js/scrolling-element.js"></script>
+<%--解决部分浏览器不支持 document.scrollingElement.scrollTop--%>
+
+<script src="<%=basePath%>resources/test/my/js/jquery-labelauty.js"></script>
+<%--美化的radio--%>
+
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-slide.js"></script>
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-scroll.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-collapse.js"></script>
+
+<script>
+   $(function () {
+
+      $(':input').labelauty();
+
+      function openModal() {
+         document.getElementById('modal').style.display = 'block';
+         document.getElementById('modal-frame').style.display = 'block';
+         ModalHelper.afterOpen();
+      }
+
+      function closeModal() {
+         ModalHelper.beforeClose();
+         document.getElementById('modal-frame').style.display = 'none';
+         document.getElementById('modal').style.display = 'none';
+      }
+
+      var btns = document.querySelectorAll('.js-open-modal');
+      btns[0].onclick = openModal;
+      btns[1].onclick = openModal;
+      document.querySelector('#modal').onclick = closeModal;
+      document.querySelector('#closeBtn').onclick = closeModal;
+
+   });
+
+
+   /*折叠面板*/
+   var collapse = new auiCollapse({
+      autoHide:false //是否自动隐藏已经展开的容器
+   });
+   /*折叠面板*/
 
    /*图片轮播*/
    var slide3 = new auiSlide({
       container: document.getElementById("aui-slide3"),
-      // "width":300,
+//    "width":300,
       "height": 240,
       "speed": 500,
       "autoPlay": 8000, //自动播放
       "loop": true,
       "pageShow": true,
-      "pageStyle": 'dot',
+//      "pageStyle": 'dot',
+      "pageStyle": 'none',
       'dotPosition': 'center'
    });
    /*图片轮播*/
@@ -326,23 +633,23 @@
    var scroll = new auiScroll({
       listen: true,
       distance: 200 //判断到达底部的距离，isToBottom为true
-   },function(ret){
-      if(ret.scrollTop>=400){
-         if(!$('#backTop').is(':visible')){
+   }, function (ret) {
+      if (ret.scrollTop >= 400) {
+         if (!$('#backTop').is(':visible')) {
             $('#backTop').show();
          }
-      }else{
-         if($('#backTop').is(':visible')){
+      } else {
+         if ($('#backTop').is(':visible')) {
             $('#backTop').hide();
          }
       }
-    /*if(ret.isToBottom){
-    document.getElementById("demo").textContent = "已到达底部";
-    }else{
-    document.getElementById("demo").textContent = "滚动高度："+ret.scrollTop;
-    }*/
+      /*if(ret.isToBottom){
+       document.getElementById("demo").textContent = "已到达底部";
+       }else{
+       document.getElementById("demo").textContent = "滚动高度："+ret.scrollTop;
+       }*/
 
-    });
+   });
 
    $("#backTop").click(function () {
 //        if(scrollTop<=50){return;}
@@ -354,7 +661,7 @@
 
 
    /*定时弹出购买小条*/
-//   var timeCount = 0;
+   //   var timeCount = 0;
    setInterval(function () {
 //      timeCount = timeCount + 1;
       if (!$('#buyTip').is(':visible')) {
