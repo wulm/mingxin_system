@@ -23,7 +23,7 @@ body.modal-open {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     display: none;
 }
 
@@ -34,9 +34,10 @@ body.modal-open {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 82%;
+    /*height: 82%;*/
+    height: 19rem;
     background: #fff;
-    z-index: 101;
+    z-index: 1011;
 }
 
 .modal-frame-header {

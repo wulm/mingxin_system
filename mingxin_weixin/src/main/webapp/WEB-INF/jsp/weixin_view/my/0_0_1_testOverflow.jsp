@@ -275,7 +275,7 @@
    </div>
    <div class="Seg-line"></div>
    <%--活动描述部分--%>
-   <div id="actDescribe" >
+   <div id="actDescribe">
       <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b  aui-padded-10 ">
          <div class="aui-flex-item-12 aui-flex-row aui-flex-left aui-font-size-14">活动详情</div>
 
@@ -285,40 +285,58 @@
             <p class=" aui-font-size-12  aui-padded-5">
                活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。活动介绍。
             </p>
-            <div><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/></div>
-            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/></div>
-            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/></div>
+            <div><img
+                  src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/>
+            </div>
+            <div><img
+                  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/>
+            </div>
+            <div><img
+                  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/>
+            </div>
             <div><img src="http://fa1.cnlinfo.net/up/info1/16091910120517781201.jpg"/></div>
-            <div><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/></div>
-            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/></div>
-            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/></div>
-            <div><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/></div>
-            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/></div>
-            <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/></div>
+            <div><img
+                  src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/>
+            </div>
+            <div><img
+                  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/>
+            </div>
+            <div><img
+                  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/>
+            </div>
+            <div><img
+                  src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1162612338,2238057927&fm=27&gp=0.jpg"/>
+            </div>
+            <div><img
+                  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511717943376&di=07c9cef15eb894e8ad03bcdf6ddb6627&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F35%2F53%2F28300542091864137456530449427.jpg"/>
+            </div>
+            <div><img
+                  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511718082232&di=57360dc14165fe974913e4eb0cf232a5&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F09%2F56%2F49G58PICKCz_1024.jpg"/>
+            </div>
             <div><img src="http://fa1.cnlinfo.net/up/info1/16091910120517781201.jpg"/></div>
          </div>
       </div>
       <div class="aui-flex-row">
-            <div class="aui-list aui-collapse ">
-               <div class="aui-collapse-item  aui-font-size-12">
-                  <div class="aui-list-item aui-collapse-header" tapmode >
-                     <div class="aui-list-item-inner ">
-                        <div class="aui-list-item-title">价格声明</div>
-                        <div class="aui-list-item-right">
-                           <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
-                        </div>
+         <div class="aui-list aui-collapse ">
+            <div class="aui-collapse-item  aui-font-size-12">
+               <div class="aui-list-item aui-collapse-header" tapmode>
+                  <div class="aui-list-item-inner ">
+                     <div class="aui-list-item-title">价格声明</div>
+                     <div class="aui-list-item-right">
+                        <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
                      </div>
                   </div>
-                  <div class="aui-collapse-content aui-padded-15 aui-font-size-10">
-                     <p>单独参与价格：是您发起1人团时活动的原价。</p>
-                     <p>发起拼团价格：根据活动组织方定义，拼主享有的活动价格优惠。</p>
-                     <p>参团价格：是您参加好友发起的活动拼团价格。</p>
-                     <p>划线价格：活动组织方提供的活动参考价格，并非《价格法》、《禁止价格欺诈行为的规定》规定的“原价”，仅供参考。</p>
-                     <p>特别提醒：实际成交价格根据您选择的团购人数、时间、礼品、保险等发生变化，最终以订单结算页的价格为准。若组织方单独对活动价格进行定义的，以组织方的表述为准。</p>
-                  </div>
-
                </div>
+               <div class="aui-collapse-content aui-padded-15 aui-font-size-10">
+                  <p>单独参与价格：是您发起1人团时活动的原价。</p>
+                  <p>发起拼团价格：根据活动组织方定义，拼主享有的活动价格优惠。</p>
+                  <p>参团价格：是您参加好友发起的活动拼团价格。</p>
+                  <p>划线价格：活动组织方提供的活动参考价格，并非《价格法》、《禁止价格欺诈行为的规定》规定的“原价”，仅供参考。</p>
+                  <p>特别提醒：实际成交价格根据您选择的团购人数、时间、礼品、保险等发生变化，最终以订单结算页的价格为准。若组织方单独对活动价格进行定义的，以组织方的表述为准。</p>
+               </div>
+
             </div>
+         </div>
 
       </div>
    </div>
@@ -330,9 +348,9 @@
          为你推荐
       </div>
 
-      <div class="aui-flex-col aui-flex-left " >
+      <div class="aui-flex-col aui-flex-left ">
 
-         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border" >
+         <div class="aui-flex-item-6 aui-flex-row aui-flex-middle aui-padded-5 aui-border">
             <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
             <p class="aui-ellipsis-2 aui-font-size-12">高岗2天1夜风车节，2万风车一起转动的天堂。高岗2天1夜风车节，2万风车一起转动的天堂。</p>
             <div class="aui-flex-col aui-flex-bottom" style="height: 1rem;">
@@ -491,7 +509,9 @@
 
       </div>
 
-      <div style="text-align: center;padding: 1rem 0;font-size: 0.7rem;">----------------------到达底部----------------------</div>
+      <div style="text-align: center;padding: 1rem 0;font-size: 0.7rem;">
+         ----------------------到达底部----------------------
+      </div>
    </div>
 </section>
 <%--弹出活动选择框--%>
@@ -500,41 +520,63 @@
    <%--弹出窗遮罩层--%>
    <div class="modal-frame" id="modal-frame">
 
-      <div >顶部</div>
-      <div style="height: 80%;"><%--内容部分--%>
-         <div class="aui-flex-col aui-flex-center aui-border-tb">
-            <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-padded-10">
-               <h3 class="aui-text-danger">淘抢购</h3>
-               <p>可爱的你会喜欢</p>
-               <img src="../image/f1.jpg">
+      <%--顶部--%>
+      <div style="height: 3.5rem;background-color: yellow;">
+         <div class="aui-flex-col aui-flex-left " >
+            <div class=" aui-flex-row aui-flex-middle aui-padded-l-5"
+                 style="width:5rem;height: 5rem;position:relative;top:-1.6rem;z-index: 11;">
+               <img src="<%=basePath%>resources/test/my/image/liulangnan.png" style="border-radius:0.3rem;">
             </div>
-            <div class="aui-flex-item-8 aui-border-l">
-               <div class="aui-flex-col aui-padded-10 aui-border-b">
-                  <div class="aui-flex-item-12">
-                     <div class="aui-flex-item-9">
-                        <h3 class="aui-text-info">有好货</h3>
-                        <p>好品味从挑剔开始</p>
-                     </div>
-                     <div class="aui-flex-item-3 aui-text-right"><img src="../image/f2.jpg"></div>
+
+            <div class=" aui-flex-row aui-flex-middle aui-flex-left aui-flex-middle aui-padded-l-5">
+               <div style="position:relative;top:-1rem;width:9rem;" >
+                  <div class="aui-font-size-10 aui-ellipsis-1">
+                     <font size="4" color="red">￥83</font>
+                     <del>&nbsp;￥156&nbsp;</del>
+                  </div>
+                  <div class="aui-font-size-10 aui-ellipsis-1">
+                     已拼<font color="red">25人</font>&nbsp;&nbsp;&nbsp;满<font color="red">30人</font>活动开启
+                  </div>
+                  <div class="aui-font-size-12 aui-ellipsis-1">
+                     已选：<strong>5人团/保险/相册、水晶/儿童1人/其他其他其他</strong>
                   </div>
                </div>
-               <div class="aui-flex-col">
-                  <div class="aui-flex-item-6 aui-padded-10" style="position: relative;">
-                     <h5 class="aui-text-warning">爱逛街</h5>
-                     <p>疯狂赛车来袭</p>
-                     <img src="../image/f3.jpg">
-                  </div>
-                  <div class="aui-flex-item-6 aui-padded-10 aui-border-l">
-                     <h5 class="aui-text-success">必买清单</h5>
-                     <p>都帮你整理好啦</p>
-                     <img src="../image/f5.jpg">
-                  </div>
-               </div>
+            </div>
+            <div style="position:absolute;right: 0;" class="aui-padded-10"
+                 <%--style="position:relative;top:-2.2rem;"--%>>
+               <span class="aui-iconfont aui-icon-close"></span>
             </div>
          </div>
-
       </div>
-      <div  style="color: white;background-color: red;text-align: center;">确定</div>
+      <hr/><%--分割条--%>
+      <%--中部--%>
+      <div style="height: 13.5rem;/*background-color: yellow;*/overflow-y:auto;">
+         <p>中部内容1</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容</p>
+         <p>中部内容0</p>
+      </div>
+      <%--底部--%>
+      <div style="height: 2rem;background-color: red;text-align: center;" class="aui-flex-row aui-flex-middle">
+         <font size="3" color="white">确定</font>
+      </div>
    </div>
 </div>
 <%--回顶部按钮--%>
@@ -610,7 +652,7 @@
 
    /*折叠面板*/
    var collapse = new auiCollapse({
-      autoHide:false //是否自动隐藏已经展开的容器
+      autoHide: false //是否自动隐藏已经展开的容器
    });
    /*折叠面板*/
 
