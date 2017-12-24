@@ -1614,7 +1614,7 @@ input[type="search"]::-webkit-search-cancel-button {
     min-height: 1.8rem;
 }
 .aui-bar-btn-item {
-    display: table-cell;
+    /*display: table-cell;*/
     position: relative;
     width: 1%;
     line-height: 1.6rem;

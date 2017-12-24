@@ -93,16 +93,12 @@ body.modal-open {
     margin-top: 0.2rem;
     margin-bottom: 0.3rem;
 }
-.modal-frame-content  .choice-items .choice-title{font-size: 1.2rem;}
-.modal-frame-content  .choice-items ul { list-style-type: none;
-    padding-left:0rem;padding-right: 0rem;margin-top: 2px;margin-bottom: 0;}
-.modal-frame-content  .choice-items li { display: inline-block;}
-/*.modal-frame-content  .choice-items li { font-size: 1.5rem;margin-bottom: 2px;}*/
+/*.modal-frame-content  .choice-items .choice-title{font-size: 1.2rem;}
+.modal-frame-content  .choice-items ul {}
+.modal-frame-content  .choice-items ul li { display: inline-block;}
+.modal-frame-content  .choice-items ul li input{ width: 0.6rem;}*/
 
 .modal-frame-footer {
     background-color: red;
     text-align: center;
-    /*height:11%;*/
-    /*height: 3rem;*/
-    /*font-size: 5px;*/
 }

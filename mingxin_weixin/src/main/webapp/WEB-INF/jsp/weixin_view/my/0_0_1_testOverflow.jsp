@@ -18,7 +18,6 @@
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-slide.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-flex.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/popGroupChoices.css"/>
-   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/jquery-labelauty.css"/>
 
    <style type="text/css">
       .header-position {
@@ -67,6 +66,64 @@
          border-radius: 0.5rem;
          z-index: 999;
       }
+
+      /*弹出选项框*/
+      body.modal-open {
+         /*解决滚动穿透问题*/
+         position: fixed;
+         width: 100%;
+      }
+
+      .modal {
+         background: rgba(0, 0, 0, 0.5);
+         position: fixed;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         z-index: 1000;
+         display: none;
+      }
+
+      .modal-frame {
+         position: fixed;
+         display: none;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         /*height: 82%;*/
+         height: 19rem;
+         background: #fff;
+         z-index: 1011;
+      }
+
+      /*弹出选项框*/
+
+      /*弹出选项按钮*/
+      .choice-title {
+         font-size: 0.6rem;
+         font-weight: 800;
+         padding-left: 0.2rem;
+      }
+
+      .choice-item-div {
+         text-align: center;
+         min-width: 2rem;
+         float: left;
+         margin: 0.2rem; /*外边距*/
+         padding: 0.2rem 0.2rem; /*内边距*/
+         font-size: 0.6rem;
+         background-color: #eeeeee;
+         border-radius: 0.2rem;
+      }
+
+      .choice-actived {
+         background-color: red;
+         color: white;
+      }
+
+      /*弹出选项按钮*/
+
    </style>
 </head>
 <body>
@@ -521,15 +578,15 @@
    <div class="modal-frame" id="modal-frame">
 
       <%--顶部--%>
-      <div style="height: 3.5rem;background-color: yellow;">
-         <div class="aui-flex-col aui-flex-left " >
+      <div style="height: 3.5rem;" class="aui-border-b">
+         <div class="aui-flex-col aui-flex-left ">
             <div class=" aui-flex-row aui-flex-middle aui-padded-l-5"
                  style="width:5rem;height: 5rem;position:relative;top:-1.6rem;z-index: 11;">
                <img src="<%=basePath%>resources/test/my/image/liulangnan.png" style="border-radius:0.3rem;">
             </div>
 
             <div class=" aui-flex-row aui-flex-middle aui-flex-left aui-flex-middle aui-padded-l-5">
-               <div style="position:relative;top:-1rem;width:9rem;" >
+               <div style="position:relative;top:-1rem;width:9rem;">
                   <div class="aui-font-size-10 aui-ellipsis-1">
                      <font size="4" color="red">￥83</font>
                      <del>&nbsp;￥156&nbsp;</del>
@@ -542,36 +599,106 @@
                   </div>
                </div>
             </div>
-            <div style="position:absolute;right: 0;" class="aui-padded-10"
-                 <%--style="position:relative;top:-2.2rem;"--%>>
-               <span class="aui-iconfont aui-icon-close"></span>
+            <div style="position:absolute;right: 0;" class="aui-padded-10">
+               <span id="closeBtn" class="aui-iconfont aui-icon-close"></span>
             </div>
          </div>
       </div>
-      <hr/><%--分割条--%>
+
+      <%--分割条--%>
       <%--中部--%>
-      <div style="height: 13.5rem;/*background-color: yellow;*/overflow-y:auto;">
-         <p>中部内容1</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容</p>
-         <p>中部内容0</p>
+      <div style="height: 13.5rem;overflow-y:auto;">
+         <div id="actTime" class=" aui-padded-t-5 aui-padded-b-5">
+            <div class="choice-title">日期</div>
+            <div class="aui-flex-col aui-flex-left ">
+               <div name="111" class="choice-item-div choice-actived">2017年12月23日（周六）</div>
+               <div name="111" class="choice-item-div">2017年12月23日（周日）</div>
+            </div>
+         </div>
+         <hr class="aui-hr"/>
+         <div id="actType" class="aui-padded-t-5 aui-padded-b-5">
+            <div class="choice-title">拼团人数</div>
+            <div class="aui-flex-col aui-flex-left ">
+               <div name="112" class="choice-item-div">1人团</div>
+               <div name="112" class="choice-item-div">2人团</div>
+               <div name="112" class="choice-item-div">3人团</div>
+               <div name="112" class="choice-item-div">5人团</div>
+               <div name="112" class="choice-item-div">10人团</div>
+               <div name="112" class="choice-item-div">15人团</div>
+               <div name="112" class="choice-item-div">20人团</div>
+               <div name="112" class="choice-item-div">30人团（拼主免单）</div>
+            </div>
+         </div>
+         <hr class="aui-hr"/>
+         <div id="actType2" class="aui-padded-t-5 aui-padded-b-5">
+            <div class="choice-title">纪念品</div>
+            <div class="aui-flex-col aui-flex-left ">
+               <div name="1152" class="choice-item-div">相册</div>
+               <div name="1152" class="choice-item-div">水晶</div>
+               <div name="1152" class="choice-item-div">围巾</div>
+               <div name="1152" class="choice-item-div">纪念手环</div>
+            </div>
+         </div>
+         <hr class="aui-hr"/>
+         <div id="actType3" class="aui-padded-t-5 aui-padded-b-5">
+            <div class="choice-title">购买活动险</div>
+            <div class="aui-flex-col aui-flex-left ">
+               <div name="1132" class="choice-item-div choice-actived">是</div>
+               <div name="1132" class="choice-item-div">否</div>
+            </div>
+         </div>
+         <hr class="aui-hr"/>
+         <div id="actType4" class="aui-padded-t-5 aui-padded-b-5">
+            <%--<div class="choice-title">携带身高1.2-1.5米儿童</div>--%>
+            <%--<div class="aui-flex-col aui-flex-left ">
+               <div name="1122" class="choice-item-div">是</div>
+               <div name="1122" class="choice-item-div">否</div>
+            </div>--%>
+            <div class="aui-flex-col ">
+               <div class="aui-flex-item-8 choice-title">携带身高1.2-1.5米儿童</div>
+               <div class="aui-flex-item-4">
+                  <%--
+                  <div class="aui-bar aui-bar-btn "  type="count" id="demo">
+                     <div class="aui-bar-btn-item aui-font-size-6 aui-pull-left" style="width: 0.6rem;height: 0.6rem;">
+                        <i class="aui-iconfont aui-icon-minus"></i>
+                     </div>
+                     &lt;%&ndash;<div class="aui-bar-btn-item">&ndash;%&gt;
+                        <input type="number" class="aui-input aui-text-center aui-pull-left" id="count" value="0">&lt;%&ndash;
+                     </div>
+                     <div class="aui-bar-btn-item aui-font-size-10 aui-pull-left">&ndash;%&gt;
+                        <i class="aui-iconfont aui-icon-plus"></i>
+                     &lt;%&ndash;</div>&ndash;%&gt;
+                  </div>
+
+               --%>
+                  <div class="aui-flex-col ">
+                     <div class="aui-flex-item-4">
+                        <div class="aui-btn ">
+                           <i class="aui-iconfont aui-icon-minus"></i>
+                        </div>
+                     </div>
+                     <div class="aui-flex-item-4">
+                        <div class="aui-btn aui-flex-row aui-flex-middle">
+                           <input type="text" readonly value="0">
+                        </div>
+                     </div>
+                     <div class="aui-flex-item-4">
+                        <div class="aui-btn ">
+                           <i class="aui-iconfont aui-icon-plus"></i>
+                        </div>
+                     </div>
+                  </div>
+                  <%--<div class="aui-btn ">
+                     <i class="aui-iconfont aui-icon-minus"></i>
+                  </div>
+                  <div ><input type="text" readonly value="0"></div>
+                  <div class="aui-btn ">
+                     <i class="aui-iconfont aui-icon-plus"></i>
+                  </div>--%>
+               </div>
+            </div>
+         </div>
+         <hr class="aui-hr"/>
       </div>
       <%--底部--%>
       <div style="height: 2rem;background-color: red;text-align: center;" class="aui-flex-row aui-flex-middle">
@@ -617,17 +744,17 @@
 <script src="<%=basePath%>resources/test/my/js/scrolling-element.js"></script>
 <%--解决部分浏览器不支持 document.scrollingElement.scrollTop--%>
 
-<script src="<%=basePath%>resources/test/my/js/jquery-labelauty.js"></script>
-<%--美化的radio--%>
+<script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-tab.js"></script>
+<%--按钮组单选框--%>
 
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-slide.js"></script>
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-scroll.js"></script>
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-collapse.js"></script>
 
 <script>
+   /*打开弹出选项*/
    $(function () {
 
-      $(':input').labelauty();
 
       function openModal() {
          document.getElementById('modal').style.display = 'block';
@@ -647,7 +774,27 @@
       document.querySelector('#modal').onclick = closeModal;
       document.querySelector('#closeBtn').onclick = closeModal;
 
+
+      /*弹出框选项变化*/
+      $(".choice-item-div").each(function () {
+         $(this).click(function () {
+            var divName = $(this).attr("name");
+            if ($(this).hasClass("choice-actived")) {
+               $(this).removeClass("choice-actived");
+            } else {
+               $("div[name='" + divName + "']").each(function () {
+                  if ($(this).hasClass("choice-actived")) {
+                     $(this).removeClass("choice-actived");
+                  }
+               });
+               $(this).addClass("choice-actived");
+            }
+         });
+      })
+      /*弹出框选项变化*/
+
    });
+   /*打开弹出选项*/
 
 
    /*折叠面板*/
@@ -716,6 +863,7 @@
 //      document.getElementById("backTop").textContent = "次数" + timeCount;
    }, 15000);//1000为1秒钟
    /*定时弹出购买小条*/
+
 
 </script>
 </html>

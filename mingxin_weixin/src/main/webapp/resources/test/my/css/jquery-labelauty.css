@@ -20,11 +20,12 @@ input.labelauty { display: none !important; }
  */
 input.labelauty + label
 {
-	min-width: 4rem;
+	/*min-width: 1rem;*/
+	width: 10em;
 	text-align: center;
 	display: table;
-	font-size: 1rem;
-	/*padding-right: 0.4rem;*/
+	font-size: 0.5rem;
+	padding-right: 0.4rem;
 	margin-bottom: 0.2rem;
 	margin-right: 0.2rem;
 	background-color: #efefef;
@@ -53,10 +54,10 @@ input.labelauty + label > span.labelauty-unchecked,
 input.labelauty + label > span.labelauty-checked
 {
 	display: inline-block;
-	line-height: 2.4rem;
+	line-height: 1.2rem;
 	vertical-align: bottom;
-	padding-right: 1rem;
-	padding-left: 1rem;
+	padding-right: 0.4rem;
+	padding-left: 0.4rem;
 }
 
 
