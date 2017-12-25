@@ -85,7 +85,7 @@
          display: none;
       }
 
-      .modal-frame {
+      .modal-choices-frame {
          position: fixed;
          display: none;
          left: 0;
@@ -121,8 +121,21 @@
          background-color: red;
          color: white;
       }
-
       /*弹出选项按钮*/
+
+      /*弹出当前拼团*/
+      .modal-nowGroups-frame{
+         position: fixed;
+         display: none;
+         left: 25%;
+         right: 25%;
+         /*bottom: 0;*/
+         /*height: 82%;*/
+         height: 10rem;
+         background: #fff;
+         z-index: 1012;
+      }
+      /*弹出当前拼团*/
 
    </style>
 </head>
@@ -195,7 +208,7 @@
    <div id="groupCurrent">
       <div class="aui-flex-col aui-flex-left aui-border-t aui-border-b  aui-padded-5">
          <div class="aui-flex-item-8 aui-flex-row aui-flex-middle aui-flex-left aui-font-size-12">75人正在拼团，可直接参与</div>
-         <div class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-flex-right aui-font-size-12">
+         <div id="open-allNowGroup-frame" class="aui-flex-item-4 aui-flex-row aui-flex-middle aui-flex-right aui-font-size-12">
             <a href="javascript:;">
                查看更多<i class="aui-iconfont aui-icon-right"></i>
             </a>
@@ -575,7 +588,7 @@
 <div id="actChoices">
    <div id="modal" class="modal"></div>
    <%--弹出窗遮罩层--%>
-   <div class="modal-frame" id="modal-frame">
+   <div class="modal-choices-frame" id="modal-choices-frame">
 
       <%--顶部--%>
       <div style="height: 3.5rem;" class="aui-border-b">
@@ -706,6 +719,14 @@
       </div>
    </div>
 </div>
+<%--弹出当前拼团中选择框--%>
+<div id="actChoices">
+   <div id="modal" class="modal"></div>
+   <%--弹出窗遮罩层--%>
+   <div class="modal-nowGroups-frame" id="modal-nowGroups-frame">弹出窗遮罩层弹出窗遮罩层弹出窗遮罩层弹出窗遮罩层
+   </div>
+</div>
+
 <%--回顶部按钮--%>
 <div id="backTop" style="display: none;">回顶部</div>
 <%--弹出拼团小提示--%>
@@ -731,8 +752,8 @@
       <i class="aui-iconfont aui-icon-comment aui-text-danger"></i>
       <div class="aui-bar-tab-label aui-text-danger">客服</div>
    </div>
-   <div class="aui-bar-tab-item aui-bg-warning aui-text-white js-open-modal" tapmode style="width: auto;">参与拼团</div>
-   <div class="aui-bar-tab-item aui-bg-danger aui-text-white js-open-modal" tapmode style="width: auto;">发起拼团</div>
+   <div id="open-joinGroup-frame" class="aui-bar-tab-item aui-bg-warning aui-text-white " tapmode style="width: auto;">参与拼团</div>
+   <div id="open-choices-frame" class="aui-bar-tab-item aui-bg-danger aui-text-white js-open-modal" tapmode style="width: auto;">发起拼团</div>
 </footer>
 </body>
 
@@ -755,25 +776,52 @@
    /*打开弹出选项*/
    $(function () {
       /*弹出遮罩层*/
-      function openModal(popId) {
+      function openModal(type) {
+//         alert(popId2);
+         if(type!=1&&type!=2){return;}
          document.getElementById('modal').style.display = 'block';
-//         document.getElementById('modal-frame').style.display = 'block';
-         document.getElementById(popId).style.display = 'block';
+//         document.getElementById('modal-choices-frame').style.display = 'block';
+         if(type==1){
+            document.getElementById('modal-choices-frame').style.display = 'block';
+         }
+         if(type==2){
+            document.getElementById('modal-nowGroups-frame').style.display = 'block';
+         }
+//         document.getElementById(popId).style.display = 'block';
          ModalHelper.afterOpen();
       }
       /*关闭遮罩层*/
-      function closeModal(popId) {
+      function closeModal(type) {
+         if(type!=1&&type!=2){return;}
          ModalHelper.beforeClose();
-//         document.getElementById('modal-frame').style.display = 'none';
-         document.getElementById(popId).style.display = 'none';
+         if(type==1){
+            document.getElementById('modal-choices-frame').style.display = 'none';
+         }
+         if(type==2){
+            document.getElementById('modal-nowGroups-frame').style.display = 'none';
+         }
+//         document.getElementById('modal-choices-frame').style.display = 'none';
+//         document.getElementById(popId).style.display = 'none';
          document.getElementById('modal').style.display = 'none';
       }
-      /*弹出活动选项*/
-      var btns = document.querySelectorAll('.js-open-modal');
-      btns[0].onclick = openModal('modal-frame');
-      btns[1].onclick = openModal('modal-frame');
-      document.querySelector('#modal').onclick = closeModal('modal-frame');
-      document.querySelector('#closeBtn').onclick = closeModal('modal-frame');
+      /*弹出和关闭活动选项*/
+      $('#open-choices-frame').click(function () {
+         openModal(1);
+      });
+      $('#modal,#closeBtn').click(function () {
+         closeModal(1);
+      });
+      /*弹出和关闭活动选项*/
+
+      /*弹出和关闭当前拼团*/
+      $('#open-allNowGroup-frame,#open-joinGroup-frame').click(function () {
+         openModal(2);
+      });
+      $('#modal').click(function () {
+         closeModal(2);
+      });
+      /*弹出和关闭当前拼团*/
+
       /**/
       /*弹出框选项变化*/
       $(".choice-item-div").each(function () {
