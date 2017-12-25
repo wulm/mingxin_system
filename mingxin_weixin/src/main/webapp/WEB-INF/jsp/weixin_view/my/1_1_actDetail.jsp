@@ -13,12 +13,10 @@
          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0,user-scalable=no"/>
    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
    <title>AUI快速完成布局</title>
-   <%--<link rel="stylesheet" href="<%=basePath%>resources/test/my/css/home.css">--%>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-slide.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-flex.css"/>
-   <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/popGroupChoices.css"/>
-
+   
    <style type="text/css">
       .header-position {
          position: fixed;
