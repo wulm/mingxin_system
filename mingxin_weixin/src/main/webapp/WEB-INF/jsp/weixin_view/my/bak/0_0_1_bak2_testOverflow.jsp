@@ -128,7 +128,7 @@
         .modal-nowGroups-frame {
             position: fixed;
             display: none;
-            border-radius: 0.6rem;
+            border-radius: 0.3rem;
             /*padding: 0.2rem; !*内边距*!*/
             left: 15%;
             right: 15%;
@@ -729,13 +729,13 @@
     <%--弹出窗遮罩层--%>
     <div class="modal-nowGroups-frame" id="modal-nowGroups-frame">
         <%--顶部--%>
-        <div class="aui-flex-col aui-border-b">
-            <div class=" aui-flex-row aui-flex-middle aui-flex-item-2 aui-padded-l-5"
+        <div class="aui-flex-col aui-border-b" style="height:15%;">
+            <%--<div class=" aui-flex-row aui-flex-middle aui-flex-item-2 "
                  style="width:10%;height:10%;">
                 <img src="<%=basePath%>resources/test/my/image/liulangnan.png">
-            </div>
+            </div>--%>
 
-            <div class=" aui-flex-row aui-flex-middle aui-flex-item-10 aui-padded-l-5">
+            <div class=" aui-flex-row aui-flex-center aui-flex-middle aui-flex-item-12 ">
                 进行中的拼团
             </div>
             <div id="nowGroups-close" style="position:absolute;top:0;right: 0;" class="aui-padded-5">
@@ -745,160 +745,47 @@
 
         <%--分割条--%>
         <%--中部--%>
-        <div style="height: 90%;overflow-y:auto;">
+        <div style="height: 85%;overflow-y:auto;">
             <div id="nowActTime" class=" aui-padded-t-5 aui-padded-b-5">
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
-                <div class="aui-flex-col aui-flex-left aui-border-b">
-                    <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
-                        <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
-                        <div class="aui-font-size-12 aui-ellipsis-1">
-                            小明小明小明小明小明小明
-                        </div>
-                    </div>
-                    <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
-                        <div class="aui-font-size-10 aui-ellipsis-1">
-                            还差<font color="red">15人</font>拼成
-                        </div>
-                        <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
-                    </div>
-                    <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-10">
-                        <div class="aui-btn aui-btn-danger  aui-font-size-10">参团</div>
-                    </div>
-                </div>
+               <div class="aui-flex-col aui-flex-left aui-border-b">
+                  <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
+                     <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
+                  </div>
+                  <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
+                     <div class="aui-font-size-12 aui-ellipsis-1">
+                        小明小明小明小明小明小明
+                     </div>
+                  </div>
+                  <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
+                     <div class="aui-font-size-10 aui-ellipsis-1">
+                        还差<font color="red">15人</font>拼成
+                     </div>
+                     <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
+                  </div>
+                  <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-5">
+                     <div class="aui-btn aui-btn-danger  aui-font-size-12">参团</div>
+                  </div>
+               </div>
+               <div class="aui-flex-col aui-flex-left aui-border-b">
+                  <div class="aui-flex-item-2 aui-flex-row aui-flex-middle aui-padded-10">
+                     <img class="aui-img-round" src="<%=basePath%>resources/test/my/image/liulangnan.png">
+                  </div>
+                  <div class="aui-flex-item-3 aui-flex-row aui-flex-middle">
+                     <div class="aui-font-size-12 aui-ellipsis-1">
+                        小明小明小明小明小明小明
+                     </div>
+                  </div>
+                  <div class="aui-flex-item-4 aui-flex-row aui-flex-middle<%--垂直居中--%> aui-flex-right<%--右对齐--%>">
+                     <div class="aui-font-size-10 aui-ellipsis-1">
+                        还差<font color="red">15人</font>拼成
+                     </div>
+                     <div class="aui-font-size-8 aui-ellipsis-1">剩余21:11:11.03</div>
+                  </div>
+                  <div class="aui-flex-item-3 aui-flex-row aui-flex-middle aui-padded-5">
+                     <div class="aui-btn aui-btn-danger  aui-font-size-12">参团</div>
+                  </div>
+               </div>
+
             </div>
         </div>
         <%--底部--%>
