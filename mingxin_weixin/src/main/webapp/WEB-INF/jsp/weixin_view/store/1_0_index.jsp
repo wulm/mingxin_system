@@ -12,7 +12,7 @@
          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 
-   <title>周周游</title>
+   <title>周周游（周末周边畅快游）</title>
 
 
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/store/themes/css/core.css">

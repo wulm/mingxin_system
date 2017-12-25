@@ -12,11 +12,11 @@
    <meta name="viewport"
          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0,user-scalable=no"/>
    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-   <title>AUI快速完成布局</title>
+   <title>周周游（周末周边畅快游）</title>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-slide.css"/>
    <link rel="stylesheet" type="text/css" href="<%=basePath%>resources/test/my/css/aui-flex.css"/>
-   
+
    <style type="text/css">
       .header-position {
          position: fixed;
@@ -640,7 +640,7 @@
       <%--分割条--%>
       <%--中部--%>
       <div style="height: 13.5rem;overflow-y:auto;">
-         <div id="actTime" class=" aui-padded-t-5 aui-padded-b-5">
+         <div id="actTime" name="actChoice-items" class=" aui-padded-t-5 aui-padded-b-5">
             <div class="choice-title">日期</div>
             <div class="aui-flex-col aui-flex-left ">
                <div name="111" class="choice-item-div choice-actived">2017年12月23日（周六）</div>
@@ -648,7 +648,7 @@
             </div>
          </div>
          <hr class="aui-hr"/>
-         <div id="actType" class="aui-padded-t-5 aui-padded-b-5">
+         <div id="actType" name="actChoice-items" class="aui-padded-t-5 aui-padded-b-5">
             <div class="choice-title">拼团人数</div>
             <div class="aui-flex-col aui-flex-left ">
                <div name="112" class="choice-item-div">1人团</div>
@@ -662,7 +662,7 @@
             </div>
          </div>
          <hr class="aui-hr"/>
-         <div id="actType2" class="aui-padded-t-5 aui-padded-b-5">
+         <div id="actGift" name="actChoice-items" class="aui-padded-t-5 aui-padded-b-5">
             <div class="choice-title">纪念品</div>
             <div class="aui-flex-col aui-flex-left ">
                <div name="1152" class="choice-item-div">相册</div>
@@ -672,7 +672,7 @@
             </div>
          </div>
          <hr class="aui-hr"/>
-         <div id="actType3" class="aui-padded-t-5 aui-padded-b-5">
+         <div id="actInsurance" name="actChoice-items" class="aui-padded-t-5 aui-padded-b-5">
             <div class="choice-title">购买活动险</div>
             <div class="aui-flex-col aui-flex-left ">
                <div name="1132" class="choice-item-div choice-actived">是</div>
@@ -680,7 +680,7 @@
             </div>
          </div>
          <hr class="aui-hr"/>
-         <div id="actType4" class="aui-padded-t-5 aui-padded-b-5">
+         <div id="actCarryChild" name="actChoice-items" class="aui-padded-t-5 aui-padded-b-5">
             <%--<div class="choice-title">携带身高1.2-1.5米儿童</div>--%>
             <%--<div class="aui-flex-col aui-flex-left ">
                <div name="1122" class="choice-item-div">是</div>
@@ -689,20 +689,7 @@
             <div class="aui-flex-col ">
                <div class="aui-flex-item-8 choice-title">携带身高1.2-1.5米儿童</div>
                <div class="aui-flex-item-4">
-                  <%--
-                  <div class="aui-bar aui-bar-btn "  type="count" id="demo">
-                     <div class="aui-bar-btn-item aui-font-size-6 aui-pull-left" style="width: 0.6rem;height: 0.6rem;">
-                        <i class="aui-iconfont aui-icon-minus"></i>
-                     </div>
-                     &lt;%&ndash;<div class="aui-bar-btn-item">&ndash;%&gt;
-                        <input type="number" class="aui-input aui-text-center aui-pull-left" id="count" value="0">&lt;%&ndash;
-                     </div>
-                     <div class="aui-bar-btn-item aui-font-size-10 aui-pull-left">&ndash;%&gt;
-                        <i class="aui-iconfont aui-icon-plus"></i>
-                     &lt;%&ndash;</div>&ndash;%&gt;
-                  </div>
 
-               --%>
                   <div class="aui-flex-col ">
                      <div class="aui-flex-item-4">
                         <div class="aui-btn ">
@@ -720,20 +707,13 @@
                         </div>
                      </div>
                   </div>
-                  <%--<div class="aui-btn ">
-                     <i class="aui-iconfont aui-icon-minus"></i>
-                  </div>
-                  <div ><input type="text" readonly value="0"></div>
-                  <div class="aui-btn ">
-                     <i class="aui-iconfont aui-icon-plus"></i>
-                  </div>--%>
                </div>
             </div>
          </div>
          <hr class="aui-hr"/>
       </div>
       <%--底部--%>
-      <div style="height: 2rem;background-color: red;text-align: center;" class="aui-flex-row aui-flex-middle">
+      <div id="btn-groupOpen-done" style="height: 2rem;background-color: red;text-align: center;" class="aui-flex-row aui-flex-middle" >
          <font size="3" color="white">确定</font>
       </div>
    </div>
@@ -931,7 +911,7 @@
                $(this).addClass("choice-actived");
             }
          });
-      })
+      });
       /*弹出框选项变化*/
    });
    /*打开弹出选项*/
@@ -1002,6 +982,29 @@
    }, 15000);//1000为1秒钟
    /*定时弹出购买小条*/
 
+   /*发起拼团确认按钮*/
+   $("#btn-groupOpen-done").click(function () {
+      /*必须先验证用户选择是否符合*//*检验所有类别是否都已经选好*/
+      var isDone=false;
+      $(".actChoice-items").each(function () {
+            /*choice-item-div*/
+            if ($(this).hasClass("choice-actived")) {
+               $(this).removeClass("choice-actived");
+            } else {
+               $("div[name='" + divName + "']").each(function () {
+                  if ($(this).hasClass("choice-actived")) {
+                     $(this).removeClass("choice-actived");
+                  }
+               });
+               $(this).addClass("choice-actived");
+            }
+
+      });
+
+
+   });
+
+   window.location.href="你所要跳转的页面";
 
 </script>
 </html>
