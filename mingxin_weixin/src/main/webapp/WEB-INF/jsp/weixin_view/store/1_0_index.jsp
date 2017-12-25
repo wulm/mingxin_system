@@ -50,8 +50,6 @@
 
 <section class="aui-scroll-contents">
    <div class="aui-content-box">
-
-
       <div id="aui-slide3">
          <div class="aui-slide-wrap">
             <div class="aui-slide-node bg-dark">

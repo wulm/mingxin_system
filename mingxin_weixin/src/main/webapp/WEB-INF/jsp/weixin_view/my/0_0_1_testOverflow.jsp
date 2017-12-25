@@ -754,27 +754,27 @@
 <script>
    /*打开弹出选项*/
    $(function () {
-
-
-      function openModal() {
+      /*弹出遮罩层*/
+      function openModal(popId) {
          document.getElementById('modal').style.display = 'block';
-         document.getElementById('modal-frame').style.display = 'block';
+//         document.getElementById('modal-frame').style.display = 'block';
+         document.getElementById(popId).style.display = 'block';
          ModalHelper.afterOpen();
       }
-
-      function closeModal() {
+      /*关闭遮罩层*/
+      function closeModal(popId) {
          ModalHelper.beforeClose();
-         document.getElementById('modal-frame').style.display = 'none';
+//         document.getElementById('modal-frame').style.display = 'none';
+         document.getElementById(popId).style.display = 'none';
          document.getElementById('modal').style.display = 'none';
       }
-
+      /*弹出活动选项*/
       var btns = document.querySelectorAll('.js-open-modal');
-      btns[0].onclick = openModal;
-      btns[1].onclick = openModal;
-      document.querySelector('#modal').onclick = closeModal;
-      document.querySelector('#closeBtn').onclick = closeModal;
-
-
+      btns[0].onclick = openModal('modal-frame');
+      btns[1].onclick = openModal('modal-frame');
+      document.querySelector('#modal').onclick = closeModal('modal-frame');
+      document.querySelector('#closeBtn').onclick = closeModal('modal-frame');
+      /**/
       /*弹出框选项变化*/
       $(".choice-item-div").each(function () {
          $(this).click(function () {
@@ -792,7 +792,6 @@
          });
       })
       /*弹出框选项变化*/
-
    });
    /*打开弹出选项*/
 
@@ -818,7 +817,7 @@
    });
    /*图片轮播*/
 
-   /*滚动回到顶部*/
+   /*滚动回到顶部*//*可结合上拉加载动态添加数据*/
    var scroll = new auiScroll({
       listen: true,
       distance: 200 //判断到达底部的距离，isToBottom为true
@@ -839,7 +838,6 @@
        }*/
 
    });
-
    $("#backTop").click(function () {
 //        if(scrollTop<=50){return;}
       $('body').animate({
@@ -847,7 +845,6 @@
       }, 100);
    });
    /*滚动回到顶部*/
-
 
    /*定时弹出购买小条*/
    //   var timeCount = 0;
