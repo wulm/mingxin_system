@@ -1,0 +1,26 @@
+
+/*带彩色分割线的div*/
+.color-seg-line {
+	padding: 0.6rem 0.5rem;
+	position: relative;
+	display: block;
+	padding-bottom: 0.8rem;
+	background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAKBAMAAACOO0tGAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAnUExURf///4u16Oxtbezz/J3B7NDh9vvd3fSmprjS8vGNje57e/jDw/7w8IQ3dnAAAABSSURBVCjPY2CAAG4l7GADVJ4hUBArEIXJJ2HXrw6TZ8auX7ABKs+zCLsBE2AGmGDXLwKT58SuX+sATIEjdgOcYfJF2A1Qg8lz4PCBwWgQUiMIAWCaOFG2MdFRAAAAAElFTkSuQmCC) -7px bottom repeat-x;
+	background-size: 2.5rem 0.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

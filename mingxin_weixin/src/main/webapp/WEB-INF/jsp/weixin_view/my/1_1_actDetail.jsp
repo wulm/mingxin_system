@@ -985,9 +985,9 @@
    /*发起拼团确认按钮*/
    $("#btn-groupOpen-done").click(function () {
       /*必须先验证用户选择是否符合*//*检验所有类别是否都已经选好*/
-      var isDone=false;
+      /*var isDone=false;
       $(".actChoice-items").each(function () {
-            /*choice-item-div*/
+            /!*choice-item-div*!/
             if ($(this).hasClass("choice-actived")) {
                $(this).removeClass("choice-actived");
             } else {
@@ -998,13 +998,12 @@
                });
                $(this).addClass("choice-actived");
             }
-
-      });
-
+      });*/
+      window.location.href="actGroupOrder.htm";
 
    });
 
-   window.location.href="你所要跳转的页面";
+//   window.location.href="你所要跳转的页面";
 
 </script>
 </html>

@@ -1376,7 +1376,7 @@ input.check:checked {
 
 /* 填写订单地址  */
 .aui-address-content {
-	padding-top: 44px;
+	padding-top: 0.1rem;
 }
 
 .aui-address-well {
