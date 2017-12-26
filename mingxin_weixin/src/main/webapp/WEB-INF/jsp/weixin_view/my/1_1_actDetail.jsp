@@ -827,7 +827,7 @@
 <script src="<%=basePath%>resources/test/my/js/popGroupChoices.js"></script>
 <%--弹出选项js--%>
 
-<script src="<%=basePath%>resources/test/store/themes/js/jquery.min.js"></script>
+<script src="<%=basePath%>resources/test/my/js/jquery.min.js"></script>
 
 <script src="<%=basePath%>resources/test/my/js/scrolling-element.js"></script>
 <%--解决部分浏览器不支持 document.scrollingElement.scrollTop--%>
@@ -839,7 +839,7 @@
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-scroll.js"></script>
 <script type="text/javascript" src="<%=basePath%>resources/test/my/js/aui-collapse.js"></script>
 
-<script>
+<script type="text/javascript">
    /*打开弹出选项*/
    $(function () {
       /*弹出遮罩层*/

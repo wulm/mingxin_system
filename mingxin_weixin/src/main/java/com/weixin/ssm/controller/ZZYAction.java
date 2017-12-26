@@ -43,11 +43,25 @@ public class ZZYAction {
       return "weixin_view/my/1_1_actDetail";/*弹出活动详情页*/
    }
 
+   /**
+    * 1_2_groupDetail方法入口
+    * @return
+    */
    @RequestMapping("/actGroupOrder")
    public String actGroupOrder(){
+      System.out.println("test-actGroupOrder");
       return "weixin_view/my/1_2_groupDetail";
    }
 
+   /**
+    * 1_3_groupMembersList方法入口
+    * @return
+    */
+   @RequestMapping("/groupMembersList")
+   public String groupMembersList(){
+      System.out.println("test-groupMembersList");
+      return "weixin_view/my/1_3_groupMembersList";
+   }
 
    /**
     * 2_0_sort方法入口
