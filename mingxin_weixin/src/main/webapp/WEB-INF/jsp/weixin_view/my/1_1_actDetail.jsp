@@ -823,10 +823,10 @@
 </footer>
 </body>
 
+<script src="<%=basePath%>resources/test/my/js/jquery.min.js"></script>
+
 <script src="<%=basePath%>resources/test/my/js/popGroupChoices.js"></script>
 <%--弹出选项js--%>
-
-<script src="<%=basePath%>resources/test/my/js/jquery.min.js"></script>
 
 <script src="<%=basePath%>resources/test/my/js/scrolling-element.js"></script>
 <%--解决部分浏览器不支持 document.scrollingElement.scrollTop--%>
