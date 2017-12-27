@@ -153,15 +153,7 @@
    <%--图片轮转部分--%>
    <div id="aui-slide3">
       <div class="aui-slide-wrap">
-         <div class="aui-slide-node bg-dark">
-            <img src="<%=basePath%>resources/test/my/image/l1.png"/>
-         </div>
-         <div class="aui-slide-node bg-dark">
-            <img src="<%=basePath%>resources/test/my/image/l2.png"/>
-         </div>
-         <div class="aui-slide-node bg-dark">
-            <img src="<%=basePath%>resources/test/my/image/l3.png"/>
-         </div>
+
          <div class="aui-slide-node bg-dark">
             <img src="<%=basePath%>resources/test/my/image/l1.png"/>
          </div>
@@ -416,13 +408,12 @@
                   </div>
                </div>
                <div class="aui-collapse-content aui-padded-15 aui-font-size-10">
-                  <p>单独参与价格：是您发起1人团时活动的原价。</p>
-                  <p>发起拼团价格：根据活动组织方定义，拼主享有的活动价格优惠。</p>
-                  <p>参团价格：是您参加好友发起的活动拼团价格。</p>
-                  <p>划线价格：活动组织方提供的活动参考价格，并非《价格法》、《禁止价格欺诈行为的规定》规定的“原价”，仅供参考。</p>
-                  <p>特别提醒：实际成交价格根据您选择的团购人数、时间、礼品、保险等发生变化，最终以订单结算页的价格为准。若组织方单独对活动价格进行定义的，以组织方的表述为准。</p>
+                  <p>1.单独参与价格：是您发起1人团时活动的原价。</p>
+                  <p>2.发起拼团价格：根据活动组织方定义，拼主享有的活动价格优惠。</p>
+                  <p>3.参团价格：是您参加好友发起的活动拼团价格。</p>
+                  <p>4.划线价格：活动组织方提供的活动参考价格，并非《价格法》、《禁止价格欺诈行为的规定》规定的“原价”，仅供参考。</p>
+                  <p>5.特别提醒：实际成交价格根据您选择的团购人数、时间、礼品、保险等发生变化，最终以订单结算页的价格为准。若组织方单独对活动价格进行定义的，以组织方的表述为准。</p>
                </div>
-
             </div>
          </div>
 
