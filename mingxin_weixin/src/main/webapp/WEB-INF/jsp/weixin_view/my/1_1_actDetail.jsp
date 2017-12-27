@@ -25,7 +25,6 @@
       }
 
       .content-positon {
-
          position: absolute;
          padding-top: 2.25rem;
          padding-bottom: 2.25rem;
@@ -1003,7 +1002,6 @@
 
    });
 
-//   window.location.href="你所要跳转的页面";
 
 </script>
 </html>
